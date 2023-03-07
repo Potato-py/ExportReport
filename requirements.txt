@@ -1,0 +1,7 @@
+docxtpl
+kaleido
+wheel
+requests
+lxml
+pandas
+openpyxl

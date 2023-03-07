@@ -1,0 +1,2294 @@
+#1
+{
+	"lang": "cn"
+}
+#2目标情况 特征以eyJob3N0IjogIj开头
+{
+	"host": "192.168.0.177",
+	"start_date": "2023-02-03T08:59:47.930561+08:00",
+	"end_date": "2023-02-03T09:09:02.138902+08:00",
+	"start_url": "http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php",
+	"duration": "0:09:11",
+	"vuln_selection": false,
+	"profile": "Full Scan",
+	"source_type": "scans",
+	"build": "14.7.220401065",
+	"progress": 100,
+	"avg_response_time": 2,
+	"max_response_time": 14575,
+	"locations_found": 7,
+	"request_count": 4389,
+	"responsive": true,
+	"technologies": ["PHP"],
+	"os": "Unknown",
+	"server": "Apache/2.4.39 (Win64) OpenSSL/1.1.1b mod_fcgid/2.3.9a mod_log_rotate/1.02",
+	"sensor_detected": null,
+	"hosts_discovered": ["http://192.168.0.177", "https://www.xp.cn"],
+	"is_starting_host": true
+}
+#3漏洞类型模板及信息
+{
+	"vt_id": "ca60589c-1efb-d051-e098-92c2569f5cb4",
+	"app_id": "crawler_password_submited_get.xml",
+	"name": "\u4f7f\u7528 GET \u65b9\u6cd5\u63d0\u4ea4\u7684\u5bc6\u7801\u5b57\u6bb5",
+	"severity": 2,
+	"details_template": "\u5e26\u901a\u8fc7 GET \u63d0\u4ea4\u4e4b\u5bc6\u7801\u5b57\u6bb5\u7684\u8868\u5355\uff1a<br/><ul>{{#.}}<li>{{url}} <br/><pre>{{match}}</pre></li>{{/.}}</ul>",
+	"impact": "\u53ef\u80fd\u51fa\u73b0\u654f\u611f\u4fe1\u606f\u62ab\u9732\u3002",
+	"description": "\u8fd9\u4e9b\u9875\u9762\u5305\u542b\u5e26\u5bc6\u7801\u5b57\u6bb5\u7684\u8868\u5355\u3002\u6b64\u8868\u5355\u7684<strong>\u65b9\u6cd5\u5c5e\u6027</strong>\u8981\u4e48\u8bbe\u7f6e\u4e3a GET\uff0c\u8981\u4e48\u5b8c\u5168\u4e0d\u5b9a\u4e49\uff08\u6b64\u60c5\u51b5\u4e0b\u9ed8\u8ba4\u4e3a GET\uff09\u3002\u6b64\u914d\u7f6e\u53ef\u80fd\u4f1a\u5bfc\u81f4\u4f7f\u7528 GET \u65b9\u6cd5\u63d0\u4ea4\u7528\u6237\u6570\u636e\uff0c\u4ece\u800c\u81f4\u4f7f\u5bc6\u7801\u5b57\u6bb5\u7684\u5185\u5bb9\u663e\u793a\u5728 URL \u4e2d\u3002\u654f\u611f\u4fe1\u606f\u4e0d\u53ef\u901a\u8fc7 URL \u4f20\u9012\u3002URL \u53ef\u4ee5\u901a\u8fc7 Referer \u62a5\u5934\u8bb0\u5f55\u6216\u6cc4\u9732\u3002",
+	"recommendation": "HTML \u8868\u5355\u7684\u65b9\u6cd5\u5c5e\u6027\u5e94\u5b9a\u4e49\u548c\u8bbe\u7f6e\u4e3a POST \u800c\u975e GET\u3002",
+	"long_description": "",
+	"tags": ["information_disclosure", "CWE-200"],
+	"cvss2": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+	"cvss_score": 5.3,
+	"refs": [],
+	"created": 1517241414,
+	"updated": 1626337931,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "informationdisclosure"
+}
+#4
+{
+	"vt_id": "bca221d1-8581-3375-4097-66b0048ed088",
+	"app_id": "no_https.xml",
+	"name": "\u672a\u52a0\u5bc6\u7684\u8fde\u63a5",
+	"severity": 2,
+	"details_template": "",
+	"impact": "\u53ef\u80fd\u51fa\u73b0\u4fe1\u606f\u62ab\u9732\u3002",
+	"description": "\u6b64\u626b\u63cf\u76ee\u6807\u901a\u8fc7\u672a\u52a0\u5bc6\u7684\u8fde\u63a5\u8fdb\u884c\u8fde\u63a5\u3002\u6f5c\u5728\u653b\u51fb\u8005\u53ef\u4ee5\u62e6\u622a\u5e76\u4fee\u6539\u5f80\u8fd4\u6b64\u7ad9\u70b9\u7684\u6570\u636e\u3002",
+	"recommendation": "\u6b64\u7ad9\u70b9\u5e94\u901a\u8fc7\u5b89\u5168\u7684 (HTTPS) \u8fde\u63a5\u53d1\u9001\u548c\u63a5\u6536\u6570\u636e\u3002",
+	"long_description": "",
+	"tags": ["weak_crypto", "CWE-319"],
+	"cvss2": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+	"cvss_score": 5.4,
+	"refs": [],
+	"created": 1554108832,
+	"updated": 1596442291,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "weakcrypto"
+}
+#5
+{
+	"vt_id": "92a2df52-5f25-bff6-2e5b-64717a2a417e",
+	"app_id": "crawler_user_credentials_plain_text.xml",
+	"name": "\u7528\u6237\u51ed\u636e\u5df2\u4f5c\u4e3a\u660e\u6587\u53d1\u9001",
+	"severity": 2,
+	"details_template": "\u5e26\u4ee5\u660e\u6587\u53d1\u9001\u4e4b\u51ed\u636e\u7684\u8868\u5355\uff1a<br/><ul>{{#.}}<li>{{url}} <br/><pre>{{match}}</pre></li>{{/.}}</ul>",
+	"impact": "\u7b2c\u4e09\u65b9\u53ef\u4ee5\u901a\u8fc7\u62e6\u622a\u672a\u52a0\u5bc6\u7684 HTTP \u8fde\u63a5\u6765\u8bfb\u53d6\u7528\u6237\u51ed\u636e\u3002",
+	"description": "\u7528\u6237\u51ed\u636e\u5df2\u901a\u8fc7\u672a\u52a0\u5bc6\u901a\u9053\u4f20\u8f93\u3002\u6b64\u4fe1\u606f\u5e94\u59cb\u7ec8\u901a\u8fc7\u52a0\u5bc6\u901a\u9053 (HTTPS) \u4f20\u8f93\uff0c\u4ee5\u907f\u514d\u88ab\u6076\u610f\u7528\u6237\u62e6\u622a\u3002",
+	"recommendation": "\u7531\u4e8e\u7528\u6237\u51ed\u636e\u88ab\u89c6\u4e3a\u654f\u611f\u4fe1\u606f\uff0c\u56e0\u6b64\u5e94\u59cb\u7ec8\u901a\u8fc7\u52a0\u5bc6\u8fde\u63a5 (HTTPS) \u5c06\u5176\u4f20\u8f93\u5230\u670d\u52a1\u5668\u3002",
+	"long_description": "",
+	"tags": ["sensitive_data_not_over_ssl", "CWE-523"],
+	"cvss2": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+	"cvss_score": 4.3,
+	"refs": [],
+	"created": 1517160926,
+	"updated": 1633525312,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "sensitivedatanotoverssl"
+}
+#6
+{
+	"vt_id": "fd1ec03e-319d-ae3b-425f-d8c1275619d8",
+	"app_id": "cookie_misconfiguration.xml",
+	"name": "Cookie \u5177\u6709\u7f3a\u5931\u3001\u4e0d\u4e00\u81f4\u6216\u77db\u76fe\u5c5e\u6027",
+	"severity": 1,
+	"details_template": "\u5177\u6709\u7f3a\u5931\u3001\u4e0d\u4e00\u81f4\u6216\u77db\u76fe\u5c5e\u6027\u7684 Cookie \u5217\u8868\uff1a<br/><ul>{{#.}}<li>{{url}} <br/><br/>\u8bbe\u7f6e\u4ee5\u4e0b\u5c5e\u6027\u7684 Cookie\uff1a<pre>{{headerSetCookie}}</pre><br/>\u6b64 Cookie \u5177\u6709\u4ee5\u4e0b\u95ee\u9898\uff1a<br/><pre>{{nicelyFormattedOutput}}</pre><br/></li>{{/.}}</ul>",
+	"impact": "Cookies \u4e0d\u4f1a\u901a\u8fc7 Web \u6d4f\u89c8\u5668\u5b58\u50a8\u6216\u63d0\u4ea4\u3002",
+	"description": "cookie \u7684\u81f3\u5c11\u4e00\u4e2a\u5c5e\u6027\u4f1a\u5bfc\u81f4\u6b64 cookie \u65e0\u6548\u6216\u4e0e\u6b64 cookie \u7684\u5176\u4ed6\u5c5e\u6027\u6216\u6b64 cookie \u7684\u4f7f\u7528\u73af\u5883\u4e0d\u517c\u5bb9\u3002\u5c3d\u7ba1\u8fd9\u672c\u8eab\u4e0d\u662f\u4e00\u4e2a\u6f0f\u6d1e\uff0c\u4f46\u5b83\u53ef\u80fd\u4f1a\u5bfc\u81f4\u5e94\u7528\u7a0b\u5e8f\u51fa\u73b0\u610f\u5916\u884c\u4e3a\uff0c\u4ece\u800c\u5bfc\u81f4\u6b21\u8981\u7684\u5b89\u5168\u95ee\u9898\u3002",
+	"recommendation": "\u786e\u4fdd cookie \u914d\u7f6e\u7b26\u5408\u9002\u7528\u6807\u51c6\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-284"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "MDN | Set-Cookie",
+		"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
+	}, {
+		"name": "Securing cookies with cookie prefixes",
+		"url": "https://www.sjoerdlangkemper.nl/2017/02/09/cookie-prefixes/"
+	}, {
+		"name": "Cookies: HTTP State Management Mechanism",
+		"url": "https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05"
+	}, {
+		"name": "SameSite Updates - The Chromium Projects",
+		"url": "https://www.chromium.org/updates/same-site"
+	}, {
+		"name": "draft-west-first-party-cookies-07: Same-site Cookies",
+		"url": "https://tools.ietf.org/html/draft-west-first-party-cookies-07"
+	}],
+	"created": 1589624307,
+	"updated": 1603879871,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+}
+#7
+{
+	"vt_id": "04b4867e-5297-23ff-c810-97acf15ed71a",
+	"app_id": "crawler_cookie_without_httponly.xml",
+	"name": "Cookie \u672a\u8bbe\u7f6e HttpOnly \u6807\u8bb0",
+	"severity": 1,
+	"details_template": "Cookie \u672a\u8bbe\u7f6e HttpOnly \u6807\u8bb0\uff1a<br/><ul>{{#.}}<li>{{url}} <br/><br/><pre>{{match}}</pre><br/></li>{{/.}}</ul>",
+	"impact": "Cookie \u53ef\u901a\u8fc7\u5ba2\u6237\u7aef\u811a\u672c\u8bbf\u95ee\u3002",
+	"description": "\u4e00\u4e2a\u6216\u591a\u4e2a cookie \u6ca1\u6709\u8bbe\u7f6e HttpOnly \u6807\u5fd7\u3002\u5f53 cookie \u8bbe\u7f6e\u6709 HttpOnly \u6807\u5fd7\u65f6\uff0c\u5b83\u4f1a\u547d\u4ee4\u6d4f\u89c8\u5668\u8be5 cookie \u53ea\u80fd\u7531\u670d\u52a1\u5668\u8bbf\u95ee\uff0c\u800c\u4e0d\u80fd\u7531\u5ba2\u6237\u7aef\u811a\u672c\u8bbf\u95ee\u3002\u8fd9\u662f\u5bf9\u4f1a\u8bdd cookie \u7684\u91cd\u8981\u5b89\u5168\u9632\u62a4\u3002",
+	"recommendation": "\u5982\u6709\u53ef\u80fd\uff0c\u60a8\u5e94\u4e3a\u8fd9\u4e9b Cookie \u8bbe\u7f6e HttpOnly \u6807\u5fd7\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-1004"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [],
+	"created": 1517241414,
+	"updated": 1596442291,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+}
+#8
+{
+	"vt_id": "cce9a019-1bcb-333f-f560-b55d5bb28f3c",
+	"app_id": "trace_method_enabled.xml",
+	"name": "TRACE \u65b9\u6cd5\u5df2\u542f\u7528",
+	"severity": 1,
+	"details_template": "",
+	"impact": "\u653b\u51fb\u8005\u53ef\u80fd\u6ee5\u7528 HTTP TRACE \u529f\u80fd\u6765\u8bbf\u95ee HTTP \u62a5\u5934\u4e2d\u7684\u4fe1\u606f\uff0c\u4f8b\u5982 Cookie\u548c\u8eab\u4efd\u9a8c\u8bc1\u6570\u636e\u3002",
+	"description": "\u6b64 Web \u670d\u52a1\u5668\u4e0a\u542f\u7528\u4e86 HTTP TRACE \u65b9\u6cd5\u3002\u5982\u679c Web \u6d4f\u89c8\u5668\u4e2d\u5b58\u5728\u5176\u4ed6\u8de8\u57df\u6f0f\u6d1e\uff0c\u5219\u53ef\u4ee5\u4ece\u4efb\u4f55\u652f\u6301 HTTP TRACE \u65b9\u6cd5\u7684\u57df\u4e2d\u8bfb\u53d6\u654f\u611f\u7684\u62a5\u5934\u4fe1\u606f\u3002",
+	"recommendation": "\u5728 Web \u670d\u52a1\u5668\u4e0a\u7981\u7528 TRACE \u65b9\u6cd5\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-489"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "W3C - RFC 2616",
+		"url": "http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html"
+	}, {
+		"name": "US-CERT VU#867593",
+		"url": "https://www.kb.cert.org/vuls/id/867593/"
+	}, {
+		"name": "Cross-site tracing (XST)",
+		"url": "https://www.cgisecurity.com/lib/WH-WhitePaper_XST_ebook.pdf"
+	}],
+	"created": 1517160703,
+	"updated": 1626868555,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+}
+#9
+{
+	"vt_id": "b8e2c082-44f1-cf0b-0b8e-0e0bb357e798",
+	"app_id": "clickjacking_x_frame_options.xml",
+	"name": "\u70b9\u51fb\u52ab\u6301\uff1aX-Frame-Options \u62a5\u5934\u7f3a\u5931",
+	"severity": 1,
+	"details_template": "\u4e0d\u5305\u542b XFO \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul>{{#.}}<li>{{url}}</li><br/>{{/.}}</ul>",
+	"impact": "\u5f71\u54cd\u53d6\u51b3\u4e8e\u53d7\u5f71\u54cd\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u3002",
+	"description": "\u70b9\u51fb\u52ab\u6301\uff08\u7528\u6237\u754c\u9762\u77eb\u6b63\u653b\u51fb\u3001UI \u77eb\u6b63\u653b\u51fb\u3001UI \u77eb\u6b63\uff09\u662f\u4e00\u79cd\u6076\u610f\u6280\u672f\uff0c\u8bf1\u4f7f Web \u7528\u6237\u70b9\u51fb\u4e0e\u7528\u6237\u8ba4\u4e3a\u5176\u5355\u51fb\u7684\u5185\u5bb9\u4e0d\u540c\u7684\u5185\u5bb9\uff0c\u4ece\u800c\u5728\u5355\u51fb\u770b\u4f3c\u65e0\u5bb3\u7684\u7f51\u9875\u65f6\u6709\u53ef\u80fd\u5bfc\u81f4\u673a\u5bc6\u4fe1\u606f\u6cc4\u9732\u6216\u8ba1\u7b97\u673a\u88ab\u63a7\u5236 \u3002<br/><br/>\u670d\u52a1\u5668\u672a\u8fd4\u56de </strong>X-Frame-Options<strong> \u62a5\u5934\uff0c\u8fd9\u610f\u5473\u7740\u6b64\u7f51\u7ad9\u5b58\u5728\u906d\u53d7\u70b9\u51fb\u52ab\u6301\u653b\u51fb\u7684\u98ce\u9669\u3002X-Frame-Options HTTP \u54cd\u5e94\u62a5\u5934\u53ef\u88ab\u7528\u4e8e\u6307\u793a\u662f\u5426\u5e94\u5141\u8bb8\u6d4f\u89c8\u5668\u5728\u6846\u67b6\u6216 iframe \u5185\u5448\u73b0\u9875\u9762\u3002\u7ad9\u70b9\u53ef\u4ee5\u901a\u8fc7\u786e\u4fdd\u5176\u5185\u5bb9\u4e2d\u672a\u5d4c\u5165\u5176\u4ed6\u7f51\u7ad9\u6765\u907f\u514d\u70b9\u51fb\u52ab\u6301\u653b\u51fb\u3002",
+	"recommendation": "\u914d\u7f6e\u60a8\u7684 Web \u670d\u52a1\u5668\uff0c\u4f7f\u5176\u5305\u542b X-Frame-Options \u62a5\u5934\u548c\u5e26\u6709 frame-ancestors \u6307\u4ee4\u7684 CSP \u62a5\u5934\u3002\u6709\u5173\u8be5\u62a5\u5934\u53ef\u80fd\u503c\u7684\u66f4\u591a\u4fe1\u606f\uff0c\u8bf7\u67e5\u9605 Web \u53c2\u8003\u8d44\u6599\u3002",
+	"long_description": "",
+	"tags": ["abuse_of_functionality", "CWE-1021"],
+	"cvss2": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N",
+	"cvss_score": 5.8,
+	"refs": [{
+		"name": "The X-Frame-Options response header",
+		"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
+	}, {
+		"name": "Clickjacking",
+		"url": "https://en.wikipedia.org/wiki/Clickjacking"
+	}, {
+		"name": "OWASP Clickjacking",
+		"url": "https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html"
+	}, {
+		"name": "Frame Buster Buster",
+		"url": "https://stackoverflow.com/questions/958997/frame-buster-buster-buster-code-needed"
+	}],
+	"created": 1608725686,
+	"updated": 1624464437,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "abuseoffunctionality"
+}
+#10
+{
+	"vt_id": "a27a2f93-e096-4488-207e-76cb918e2613",
+	"app_id": "php_version_disclosure.xml",
+	"name": "PHP \u7248\u672c\u6cc4\u9732",
+	"severity": 0,
+	"details_template": "\u68c0\u6d4b\u7684\u7248\u672c\uff1a<strong>{{version}}</strong>\u3002",
+	"impact": "\u653b\u51fb\u8005\u53ef\u4ee5\u4f7f\u7528\u62ab\u9732\u7684\u4fe1\u606f\u83b7\u53d6\u6240\u786e\u8ba4\u7248\u672c\u7684\u7279\u5b9a\u5b89\u5168\u6f0f\u6d1e\u3002",
+	"description": "Web \u670d\u52a1\u5668\u6b63\u5728\u53d1\u9001 X-Powered-By\uff1a\u54cd\u5e94\u62a5\u5934\uff0c\u663e\u793a PHP \u7248\u672c\u3002",
+	"recommendation": "\u914d\u7f6e Web \u670d\u52a1\u5668\u4ee5\u9632\u6b62\u5176 HTTP \u54cd\u5e94\u7684\u4fe1\u606f\u6cc4\u9732\u3002",
+	"long_description": "",
+	"tags": [],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "PHP Documentation: header_remove()",
+		"url": "https://www.php.net/manual/en/function.header-remove.php"
+	}, {
+		"name": "PHP Documentation: php.ini directive expose_php",
+		"url": "https://www.php.net/manual/en/ini.core.php#ini.expose-php"
+	}],
+	"created": 1517160703,
+	"updated": 1626868555,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": ""
+}
+#11
+{
+	"vt_id": "3f6a8a0e-07f2-af81-54ff-61020299caeb",
+	"app_id": "no_http_redirection.xml",
+	"name": "\u65e0 HTTP \u91cd\u5b9a\u5411",
+	"severity": 0,
+	"details_template": "",
+	"impact": "\u5728\u67d0\u4e9b\u60c5\u51b5\u4e0b\uff0c\u5176\u53ef\u7528\u4e8e\u4e2d\u95f4\u4eba (MitM) \u653b\u51fb",
+	"description": "\u68c0\u6d4b\u5230\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4f7f\u7528 HTTP \u534f\u8bae\uff0c\u4f46\u672a\u81ea\u52a8\u5c06\u7528\u6237\u91cd\u5b9a\u5411\u5230 HTTPS\u3002",
+	"recommendation": "\u5efa\u8bae\u5728\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u5b9e\u65bd HTTP \u91cd\u5b9a\u5411\u6700\u4f73\u5b9e\u8df5\u3002\u8bf7\u67e5\u8be2\u7f51\u7edc\u53c2\u8003\u6587\u4ef6\u4ee5\u4e86\u89e3\u66f4\u591a\u4fe1\u606f",
+	"long_description": "",
+	"tags": ["CWE-16"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "HTTP Redirections",
+		"url": "https://infosec.mozilla.org/guidelines/web_security#http-redirections"
+	}],
+	"created": 1600900764,
+	"updated": 1601991852,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": ""
+}
+#12
+{
+	"vt_id": "011055fc-94f1-ab96-56ac-53117c56fb4d",
+	"app_id": "csp_not_implemented.xml",
+	"name": "\u672a\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)",
+	"severity": 0,
+	"details_template": "\u4e0d\u5305\u542b CSP \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul>{{#.}}<li>{{url}}</li><br/>{{/.}}</ul>",
+	"impact": "CSP \u53ef\u7528\u4e8e\u9884\u9632\u548c/\u6216\u7f13\u89e3\u6d89\u53ca\u5185\u5bb9/\u4ee3\u7801\u6ce8\u5165\u7684\u653b\u51fb\uff0c\u4f8b\u5982\u8de8\u7ad9\u811a\u672c/XSS \u653b\u51fb\u3001\u9700\u8981\u5d4c\u5165\u6076\u610f\u8d44\u6e90\u7684\u653b\u51fb\u3001\u6d89\u53ca\u6076\u610f\u4f7f\u7528 iframe \u7684\u653b\u51fb\uff08\u4f8b\u5982\u70b9\u51fb\u52ab\u6301\u653b\u51fb\uff09\u7b49\u3002",
+	"description": "\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP) \u589e\u52a0\u4e86\u989d\u5916\u7684\u5b89\u5168\u5c42\uff0c\u6709\u52a9\u4e8e\u68c0\u6d4b\u548c\u7f13\u89e3\u67d0\u4e9b\u7c7b\u578b\u7684\u653b\u51fb\uff0c\u5305\u62ec\u8de8\u7ad9\u811a\u672c (XSS) \u548c\u6570\u636e\u6ce8\u5165\u653b\u51fb\u3002<br/><br/>\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP) \u53ef\u901a\u8fc7\u6dfb\u52a0 <strong>Content-Security-Policy</strong> \u62a5\u5934\u5b9e\u65bd\u3002\u6b64\u62a5\u5934\u7684\u503c\u662f\u4e00\u4e2a\u5b57\u7b26\u4e32\uff0c\u5176\u4e2d\u5305\u542b\u63cf\u8ff0\u5185\u5bb9\u5b89\u5168\u7b56\u7565\u7684\u7b56\u7565\u6307\u4ee4\u3002\u8981\u5b9e\u65bd CSP\uff0c\u60a8\u5e94\u8be5\u4e3a\u7ad9\u70b9\u4f7f\u7528\u7684\u6240\u6709\u8d44\u6e90\u7c7b\u578b\u5b9a\u4e49\u5141\u8bb8\u7684\u6765\u6e90\u5217\u8868\u3002\u4f8b\u5982\uff0c\u5982\u679c\u60a8\u6709\u4e00\u4e2a\u7b80\u5355\u7684\u7ad9\u70b9\uff0c\u9700\u8981\u4ece CDN \u52a0\u8f7d\u672c\u5730\u6258\u7ba1\u548c jQuery \u5e93\u4e2d\u7684\u811a\u672c\u3001\u6837\u5f0f\u8868\u548c\u56fe\u50cf\uff0c\u5219 CSP \u62a5\u5934\u53ef\u80fd\u5982\u4e0b\u6240\u793a\uff1a<pre><code> Content-Security-Policy: default-src 'self'; script-src 'self' https://code.jquery.com; </code></pre> <br/><br/>\u68c0\u6d4b\u5230\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u672a\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)\uff0c\u56e0\u4e3a\u54cd\u5e94\u4e2d\u7f3a\u5c11 CSP \u62a5\u5934\u3002\u5efa\u8bae\u5728\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)\u3002",
+	"recommendation": "\u5efa\u8bae\u5728\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)\u3002\u914d\u7f6e\u5185\u5bb9\u5b89\u5168\u7b56\u7565\u6d89\u53ca\u6dfb\u52a0 <strong>Content-Security-Policy</strong> HTTP \u62a5\u5934\u5230 Web \u9875\u9762\u5e76\u4e3a\u5176\u8d4b\u503c\uff0c\u4ee5\u63a7\u5236\u5141\u8bb8\u7528\u6237\u4ee3\u7406\u4e3a\u8be5\u9875\u9762\u52a0\u8f7d\u7684\u8d44\u6e90\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-1021"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "Content Security Policy (CSP)",
+		"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+	}, {
+		"name": "Implementing Content Security Policy",
+		"url": "https://hacks.mozilla.org/2016/02/implementing-content-security-policy/"
+	}],
+	"created": 1537256546,
+	"updated": 1636020173,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+}
+#13漏洞层级  特征 eyJsb2NfaWQiOiA开头
+{
+	"loc_id": 2,
+	"scan_session_id": "addca1f3-ae89-495b-959b-8d57908d4740",
+	"name": "http://192.168.0.177/",
+	"parent_id": null,
+	"source_id": 2,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/",
+	"loc_type": "folder",
+	"input_data": null,
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/"
+}
+{
+	"loc_id": 6,
+	"scan_session_id": "addca1f3-ae89-495b-959b-8d57908d4740",
+	"name": "pikachu-master",
+	"parent_id": 2,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/pikachu-master/",
+	"loc_type": "folder",
+	"input_data": null,
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/"
+}
+{
+	"loc_id": 7,
+	"scan_session_id": "addca1f3-ae89-495b-959b-8d57908d4740",
+	"name": "vul",
+	"parent_id": 6,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/pikachu-master/vul/",
+	"loc_type": "folder",
+	"input_data": null,
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/"
+}
+{
+	"loc_id": 8,
+	"scan_session_id": "addca1f3-ae89-495b-959b-8d57908d4740",
+	"name": "csrf",
+	"parent_id": 7,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/pikachu-master/vul/csrf/",
+	"loc_type": "folder",
+	"input_data": null,
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/csrf/"
+} {
+	"loc_id": 9,
+	"scan_session_id": "addca1f3-ae89-495b-959b-8d57908d4740",
+	"name": "csrfget",
+	"parent_id": 8,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": ["static", "stable404", "found"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/csrf/csrfget/",
+	"loc_type": "folder",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/csrf/csrfget/"
+} {
+	"loc_id": 10,
+	"scan_session_id": "addca1f3-ae89-495b-959b-8d57908d4740",
+	"name": "csrf_get_login.php",
+	"parent_id": 9,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": ["_linked"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/csrf/csrfget/csrf_get_login.php",
+	"loc_type": "file",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "URL encoded GET",
+			"input_names": ["", "password", "username"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 2,
+		"method": "GET",
+		"groups": [{
+			"type": "URL encoded GET",
+			"input_names": ["password", "submit", "username"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php"
+}
+#19漏洞层级  特征 eyJsb2NfdXJsI开头
+{
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "ca60589c-1efb-d051-e098-92c2569f5cb4",
+	"vuln_hash": "0ebaa51c-7229-e98e-c782-b48f3ccefa4d",
+	"request": "GET /pikachu-master/vul/csrf/csrfget/csrf_get_login.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/RPA/Password_In_Get.js",
+	"loc_id": 2,
+	"details": "\u5e26\u901a\u8fc7 GET \u63d0\u4ea4\u4e4b\u5bc6\u7801\u5b57\u6bb5\u7684\u8868\u5355\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php <br/><pre>Form name: &lt;empty&gt;\nForm action: csrf_get_login.php\nForm method: GET\nPassword input: password</pre></li></ul>",
+	"app_id": "crawler_password_submited_get.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:03.817829+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u4f7f\u7528 GET \u65b9\u6cd5\u63d0\u4ea4\u7684\u5bc6\u7801\u5b57\u6bb5",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "bca221d1-8581-3375-4097-66b0048ed088",
+	"vuln_hash": "f746daba-23a2-0b33-fe58-9e5daf79f1ce",
+	"request": "GET /pikachu-master/vul/csrf/csrfget/csrf_get_login.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/RPA/no_https.js",
+	"loc_id": 2,
+	"details": "",
+	"app_id": "no_https.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:03.799118+08:00",
+	"status": "open",
+	"tags": ["confidence.100", "verified"],
+	"url": "http://192.168.0.177/",
+	"name": "\u672a\u52a0\u5bc6\u7684\u8fde\u63a5",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "92a2df52-5f25-bff6-2e5b-64717a2a417e",
+	"vuln_hash": "86918d29-a41d-c7f7-a7fd-7ddd3271bd04",
+	"request": "GET /pikachu-master/vul/csrf/csrfget/csrf_get_login.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Crawler/12-Crawler_User_Credentials_Plain_Text.js",
+	"loc_id": 2,
+	"details": "\u5e26\u4ee5\u660e\u6587\u53d1\u9001\u4e4b\u51ed\u636e\u7684\u8868\u5355\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php <br/><pre>Form name: &lt;empty&gt;\nForm action: csrf_get_login.php\nForm method: GET\nPassword input: password</pre></li></ul>",
+	"app_id": "crawler_user_credentials_plain_text.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:01.970682+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u7528\u6237\u51ed\u636e\u5df2\u4f5c\u4e3a\u660e\u6587\u53d1\u9001",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "fd1ec03e-319d-ae3b-425f-d8c1275619d8",
+	"vuln_hash": "9b8e7498-8118-b79c-0dc2-1533eab38932",
+	"request": "GET /pikachu-master/vul/csrf/csrfget/csrf_get_login.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/RPA/Cookie_Validator.js",
+	"loc_id": 2,
+	"details": "\u5177\u6709\u7f3a\u5931\u3001\u4e0d\u4e00\u81f4\u6216\u77db\u76fe\u5c5e\u6027\u7684 Cookie \u5217\u8868\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php <br/><br/>\u8bbe\u7f6e\u4ee5\u4e0b\u5c5e\u6027\u7684 Cookie\uff1a<pre>Set-Cookie: PHPSESSID=84tbhc3gvimj9m9uc2k31bh537; path=/</pre><br/>\u6b64 Cookie \u5177\u6709\u4ee5\u4e0b\u95ee\u9898\uff1a<br/><pre>\n - Cookie without SameSite attribute.\nWhen cookies lack the SameSite attribute, Web browsers may apply different and sometimes unexpected defaults. It is therefore recommended to add a SameSite attribute with an appropriate value of either &quot;Strict&quot;, &quot;Lax&quot;, or &quot;None&quot;.\n</pre><br/></li></ul>",
+	"app_id": "cookie_misconfiguration.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:03.433926+08:00",
+	"status": "open",
+	"tags": ["confidence.100", "verified"],
+	"url": "http://192.168.0.177/",
+	"name": "Cookie \u5177\u6709\u7f3a\u5931\u3001\u4e0d\u4e00\u81f4\u6216\u77db\u76fe\u5c5e\u6027",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "04b4867e-5297-23ff-c810-97acf15ed71a",
+	"vuln_hash": "245bf4e3-3c33-ae3f-94f5-c2e3a7228242",
+	"request": "GET /pikachu-master/vul/csrf/csrfget/csrf_get_login.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/RPA/Cookie_Without_HttpOnly.js",
+	"loc_id": 2,
+	"details": "Cookie \u672a\u8bbe\u7f6e HttpOnly \u6807\u8bb0\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php <br/><br/><pre>Set-Cookie: PHPSESSID=84tbhc3gvimj9m9uc2k31bh537; path=/</pre><br/></li></ul>",
+	"app_id": "crawler_cookie_without_httponly.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:03.448353+08:00",
+	"status": "open",
+	"tags": ["confidence.100", "verified"],
+	"url": "http://192.168.0.177/",
+	"name": "Cookie \u672a\u8bbe\u7f6e HttpOnly \u6807\u8bb0",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "cce9a019-1bcb-333f-f560-b55d5bb28f3c",
+	"vuln_hash": "bbff3630-d79a-2699-c472-9312b62ea8ac",
+	"request": "TRACE /XIE33ymANH HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Scripts/PerServer/Track_Trace_Server_Methods.script",
+	"loc_id": 2,
+	"details": "",
+	"app_id": "trace_method_enabled.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:01.779434+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "TRACE \u65b9\u6cd5\u5df2\u542f\u7528",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "b8e2c082-44f1-cf0b-0b8e-0e0bb357e798",
+	"vuln_hash": "81ef1660-a08e-25c9-11bf-338ceb90d211",
+	"request": "GET /pikachu-master/vul/csrf/csrfget/csrf_get_login.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/httpdata/X_Frame_Options_not_implemented.js",
+	"loc_id": 2,
+	"details": "\u4e0d\u5305\u542b XFO \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php</li><br/></ul>",
+	"app_id": "clickjacking_x_frame_options.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:03.422907+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u70b9\u51fb\u52ab\u6301\uff1aX-Frame-Options \u62a5\u5934\u7f3a\u5931",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "a27a2f93-e096-4488-207e-76cb918e2613",
+	"vuln_hash": "18eed14d-3f7a-0a5a-0e4a-ff3bd82d338e",
+	"request": "",
+	"source": "/Scripts/PerServer/Version_Check.script",
+	"loc_id": 2,
+	"details": "\u68c0\u6d4b\u7684\u7248\u672c\uff1a<strong>PHP/7.0.9</strong>\u3002",
+	"app_id": "php_version_disclosure.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:01.790753+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "PHP \u7248\u672c\u6cc4\u9732",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+} {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "3f6a8a0e-07f2-af81-54ff-61020299caeb",
+	"vuln_hash": "99736f45-f7ec-36e5-fd2b-0863a67d8450",
+	"request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/target/http_redirections.js",
+	"loc_id": 2,
+	"details": "",
+	"app_id": "no_http_redirection.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:00.164262+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u65e0 HTTP \u91cd\u5b9a\u5411",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "011055fc-94f1-ab96-56ac-53117c56fb4d",
+	"vuln_hash": "0972f3df-07ca-e9cd-95d2-f313da05cc76",
+	"request": "GET /pikachu-master/vul/csrf/csrfget/csrf_get_login.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/httpdata/CSP_not_implemented.js",
+	"loc_id": 2,
+	"details": "\u4e0d\u5305\u542b CSP \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/csrf/csrfget/csrf_get_login.php</li><br/></ul>",
+	"app_id": "csp_not_implemented.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:02.674394+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u672a\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"host": "192.168.0.177",
+	"start_date": "2023-02-03T08:59:47.948832+08:00",
+	"end_date": "2023-02-03T09:11:03.866281+08:00",
+	"start_url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php",
+	"duration": "0:11:13",
+	"vuln_selection": false,
+	"profile": "Full Scan",
+	"source_type": "scans",
+	"build": "14.7.220401065",
+	"progress": 100,
+	"avg_response_time": 2,
+	"max_response_time": 28295,
+	"locations_found": 9,
+	"request_count": 5129,
+	"responsive": true,
+	"technologies": ["PHP"],
+	"os": "Unknown",
+	"server": "Apache/2.4.39 (Win64) OpenSSL/1.1.1b mod_fcgid/2.3.9a mod_log_rotate/1.02",
+	"sensor_detected": null,
+	"hosts_discovered": ["http://192.168.0.177", "https://www.xp.cn"],
+	"is_starting_host": true
+} {
+	"vt_id": "5b3895f4-9656-d13f-8a83-5d9dabcdadf5",
+	"app_id": "file_upload.xml",
+	"name": "\u4e0d\u53d7\u9650\u5236\u7684\u6587\u4ef6\u4e0a\u4f20",
+	"severity": 3,
+	"details_template": "\u5df2\u6210\u529f\u4e0a\u4f20\u6587\u4ef6 <strong><span class=\\\"bb-dark\\\">{{filename}}</span></strong>\uff0c\u5185\u5bb9\u7c7b\u578b\u4e3a <strong><span class=\\\"bb-dark\\\">{{ct}}</span></strong>\u3002<br/>\u6587\u4ef6\u4f4d\u4e8e\uff1a<strong><span class=\\\"bb-dark\\\">{{uri}}</span></strong>\u3002",
+	"impact": "\u653b\u51fb\u8005\u6709\u53ef\u80fd\u5229\u7528\u6b64\u6f0f\u6d1e\u6765\u6267\u884c\u4efb\u610f\u4ee3\u7801\u3002",
+	"description": "\u6b64\u811a\u672c\u53ef\u80fd\u5bb9\u6613\u53d7\u5230\u65e0\u9650\u5236\u6587\u4ef6\u4e0a\u4f20\u7684\u653b\u51fb\u3002\u591a\u4e2a Web \u5e94\u7528\u7a0b\u5e8f\u5141\u8bb8\u7528\u6237\u4e0a\u4f20\u6587\u4ef6\uff08\u5982\u56fe\u7247\u3001\u56fe\u50cf\u3001\u58f0\u97f3\u7b49\uff09\u3002\u5982\u679c\u5904\u7406\u4e0d\u5f53\uff0c\u4e0a\u4f20\u7684\u6587\u4ef6\u53ef\u80fd\u4f1a\u5e26\u6765\u5f88\u5927\u7684\u98ce\u9669\u3002\u8fdc\u7a0b\u653b\u51fb\u8005\u53ef\u80fd\u53d1\u9001\u5e26\u6709\u7279\u5236\u6587\u4ef6\u540d\u6216 mime \u7c7b\u578b\u7684 multipart/form-data POST \u8bf7\u6c42\u5e76\u6267\u884c\u4efb\u610f\u4ee3\u7801\u3002Acunetix \u80fd\u591f\u4e0a\u4f20\u5305\u542b\u53ef\u6267\u884c\u4ee3\u7801\u7684\u6587\u4ef6\u5e76\u6267\u884c\u6b64\u4ee3\u7801\u3002\u67e5\u770b<strong>\u653b\u51fb\u8be6\u7ec6\u4fe1\u606f</strong>\u4ee5\u4e86\u89e3\u6709\u5173\u6b64\u653b\u51fb\u7684\u66f4\u591a\u4fe1\u606f\u3002",
+	"recommendation": "\u9650\u5236\u4e0a\u4f20\u53ef\u63a5\u53d7\u7684\u6587\u4ef6\u7c7b\u578b\uff1a\u68c0\u67e5\u6587\u4ef6\u6269\u5c55\u540d\uff0c\u5e76\u4ec5\u5141\u8bb8\u4e0a\u4f20\u7279\u5b9a\u6587\u4ef6\u3002\u4f7f\u7528\u767d\u540d\u5355\u65b9\u5f0f\uff0c\u800c\u4e0d\u662f\u9ed1\u540d\u5355\u65b9\u5f0f\u3002\u68c0\u67e5\u53cc\u91cd\u6269\u5c55\u540d\uff0c\u5982 .php.png\u3002\u68c0\u67e5\u6ca1\u6709\u6587\u4ef6\u540d\u7684\u6587\u4ef6\uff0c\u5982 .htaccess\uff08\u5728 ASP.NET \u4e0a\uff0c\u68c0\u67e5\u914d\u7f6e\u6587\u4ef6\uff0c\u5982 web.config\uff09\u3002\u5728\u4e0a\u4f20\u6587\u4ef6\u5939\u4e0a\u66f4\u6539\u6743\u9650\uff0c\u4ee5\u4f7f\u5176\u4e2d\u7684\u6587\u4ef6\u4e0d\u53ef\u6267\u884c\u3002\u5982\u679c\u53ef\u80fd\uff0c\u91cd\u547d\u540d\u5df2\u4e0a\u4f20\u7684\u6587\u4ef6\u3002",
+	"long_description": "",
+	"tags": ["abuse_of_functionality", "arbitrary_file_creation", "unauthenticated_file_upload", "CWE-434"],
+	"cvss2": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+	"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+	"cvss_score": 9.1,
+	"refs": [{
+		"name": "OWASP Unrestricted File Upload",
+		"url": "https://www.owasp.org/index.php/Unrestricted_File_Upload"
+	}, {
+		"name": "Why File Upload Forms are a major security threat",
+		"url": "https://www.acunetix.com/websitesecurity/upload-forms-threat/"
+	}],
+	"created": 1517160703,
+	"updated": 1647449009,
+	"app": "wvs",
+	"vuln_count": 2,
+	"type": "abuseoffunctionality"
+} {
+	"vt_id": "c2e0724e-0fcc-0a5c-3811-3cb782d129b0",
+	"app_id": "file_upload_xss.xml",
+	"name": "\u6587\u4ef6\u4e0a\u4f20 XSS",
+	"severity": 3,
+	"details_template": "\u5df2\u6210\u529f\u4e0a\u4f20\u6587\u4ef6 <strong><span class=\\\"bb-dark\\\">{{filename}}</span></strong>\uff0c\u5185\u5bb9\u7c7b\u578b\u4e3a <strong><span class=\\\"bb-dark\\\">{{ct}}</span></strong>\u3002{{#uri}}<br/>\u6587\u4ef6\u4f4d\u4e8e\uff1a<strong><span class=\\\"bb-dark\\\">{{uri}}</span></strong>\u3002{{/uri}} {{#exif}}<br/>\u6587\u4ef6\u5305\u542b\u542b\u6709 XSS \u6709\u6548\u8d1f\u8f7d\u7684 EXIF \u6761\u76ee\u3002\u4f3c\u4e4e Web \u5e94\u7528\u7a0b\u5e8f\u5df2\u5904\u7406\u56fe\u50cf\uff0c\u5e76\u5728\u672a\u7ecf\u9002\u5f53\u6e05\u7406\u7684\u60c5\u51b5\u4e0b\u663e\u793a\u4e86\u5b83\u4eec\u7684\u503c\u3002{{/exif}}",
+	"impact": "Malicious \u7528\u6237\u53ef\u4ee5\u5c06 JavaScript\u3001VBScript\u3001ActiveX\u3001HTML \u6216 Flash \u6ce8\u5165\u81f3\u6613\u53d7\u653b\u51fb\u7684\u5e94\u7528\u7a0b\u5e8f\uff0c\u6b3a\u9a97\u7528\u6237\uff0c\u4ee5\u4ece\u8fd9\u4e9b\u7528\u6237\u5904\u6536\u96c6\u6570\u636e\u3002\u653b\u51fb\u8005\u53ef\u4ee5\u7a83\u53d6\u4f1a\u8bdd cookie \u5e76\u638c\u63a7\u5e10\u6237\uff0c\u4ee5\u5192\u5145\u7528\u6237\uff0c\u8fd8\u53ef\u80fd\u4fee\u6539\u7528\u6237\u80fd\u591f\u770b\u5230\u7684\u9875\u9762\u5185\u5bb9\u3002",
+	"description": "\u6b64\u811a\u672c\u53ef\u80fd\u5bb9\u6613\u53d7\u5230 XSS\uff08\u8de8\u7ad9\u811a\u672c\uff09\u7684\u653b\u51fb\u3002\u6b64 Web \u5e94\u7528\u7a0b\u5e8f\u5141\u8bb8\u6587\u4ef6\u4e0a\u4f20\uff0cAcunetix \u80fd\u591f\u4e0a\u4f20\u5305\u542b HTML \u5185\u5bb9\u7684\u6587\u4ef6\u3002\u5f53\u5141\u8bb8 HTML \u6587\u4ef6\u65f6\uff0cXSS \u6709\u6548\u8d1f\u8f7d\u53ef\u80fd\u88ab\u6ce8\u5165\u4e0a\u4f20\u7684\u6587\u4ef6\u4e2d\u3002\u67e5\u770b<strong>\u653b\u51fb\u8be6\u7ec6\u4fe1\u606f</strong>\u4ee5\u4e86\u89e3\u6709\u5173\u6b64\u653b\u51fb\u7684\u66f4\u591a\u4fe1\u606f\u3002",
+	"recommendation": "\u9650\u5236\u4e0a\u4f20\u53ef\u63a5\u53d7\u7684\u6587\u4ef6\u7c7b\u578b\uff1a\u68c0\u67e5\u6587\u4ef6\u6269\u5c55\u540d\uff0c\u5e76\u4ec5\u5141\u8bb8\u4e0a\u4f20\u7279\u5b9a\u6587\u4ef6\u3002\u4f7f\u7528\u767d\u540d\u5355\u65b9\u5f0f\uff0c\u800c\u4e0d\u662f\u9ed1\u540d\u5355\u65b9\u5f0f\u3002\u68c0\u67e5\u53cc\u91cd\u6269\u5c55\u540d\uff0c\u5982 .php.png\u3002\u68c0\u67e5\u6ca1\u6709\u6587\u4ef6\u540d\u7684\u6587\u4ef6\uff0c\u5982 .htaccess\uff08\u5728 ASP.NET \u4e0a\uff0c\u68c0\u67e5\u914d\u7f6e\u6587\u4ef6\uff0c\u5982 web.config\uff09\u3002\u5728\u4e0a\u4f20\u6587\u4ef6\u5939\u4e0a\u66f4\u6539\u6743\u9650\uff0c\u4ee5\u4f7f\u5176\u4e2d\u7684\u6587\u4ef6\u4e0d\u53ef\u6267\u884c\u3002\u5982\u679c\u53ef\u80fd\uff0c\u91cd\u547d\u540d\u5df2\u4e0a\u4f20\u7684\u6587\u4ef6\u3002",
+	"long_description": "",
+	"tags": ["abuse_of_functionality", "arbitrary_file_creation", "unauthenticated_file_upload", "xss", "CWE-79"],
+	"cvss2": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+	"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+	"cvss_score": 5.3,
+	"refs": [{
+		"name": "OWASP Unrestricted File Upload",
+		"url": "https://www.owasp.org/index.php/Unrestricted_File_Upload"
+	}, {
+		"name": "Why File Upload Forms are a major security threat",
+		"url": "https://www.acunetix.com/websitesecurity/upload-forms-threat/"
+	}, {
+		"name": "Testing for Stored Cross site scripting (OWASP-DV-002)",
+		"url": "https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OWASP-DV-002)"
+	}],
+	"created": 1517160703,
+	"updated": 1647449009,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "abuseoffunctionality"
+} {
+	"vt_id": "b0a22c24-2a9a-5a75-323e-3231fe2c7f4d",
+	"app_id": "applet_file_upload.xml",
+	"name": "\u6587\u4ef6\u4e0a\u4f20 XSS (Java applet)",
+	"severity": 3,
+	"details_template": "\u5df2\u6210\u529f\u4e0a\u4f20\u6587\u4ef6 <strong><span class=\\\"bb-dark\\\">{{filename}}</span></strong>\uff0c\u5185\u5bb9\u7c7b\u578b\u4e3a <strong><span class=\\\"bb-dark\\\">{{ct}}</span></strong>\u3002<br/>\u6587\u4ef6\u4f4d\u4e8e\uff1a<strong><span class=\\\"bb-dark\\\">{{uri}}</span></strong>\u3002",
+	"impact": "Malicious \u7528\u6237\u53ef\u4ee5\u5c06 JavaScript\u3001VBScript\u3001ActiveX\u3001HTML \u6216 Flash \u6ce8\u5165\u81f3\u6613\u53d7\u653b\u51fb\u7684\u5e94\u7528\u7a0b\u5e8f\uff0c\u6b3a\u9a97\u7528\u6237\uff0c\u4ee5\u4ece\u8fd9\u4e9b\u7528\u6237\u5904\u6536\u96c6\u6570\u636e\u3002\u653b\u51fb\u8005\u53ef\u4ee5\u7a83\u53d6\u4f1a\u8bdd cookie \u5e76\u638c\u63a7\u5e10\u6237\uff0c\u4ee5\u5192\u5145\u7528\u6237\uff0c\u8fd8\u53ef\u80fd\u4fee\u6539\u7528\u6237\u80fd\u591f\u770b\u5230\u7684\u9875\u9762\u5185\u5bb9\u3002",
+	"description": "\u6b64 Web \u5e94\u7528\u7a0b\u5e8f\u652f\u6301\u6587\u4ef6\u4e0a\u4f20\uff0cAcunetix \u80fd\u591f\u4e0a\u4f20 Java Applet (.class/.jar) \u6587\u4ef6\u3002\u5982\u679c Web \u6d4f\u89c8\u5668\u4ece\u53d7\u4fe1\u4efb\u7684\u7ad9\u70b9\u52a0\u8f7d Java Applet\uff0c\u5219\u6d4f\u89c8\u5668\u4e0d\u4f1a\u63d0\u4f9b\u5b89\u5168\u8b66\u544a\u3002\u5982\u679c\u653b\u51fb\u8005\u53ef\u4ee5\u4e0a\u4f20\u5305\u542b Applet \u7684 CLASS/JAR \u6587\u4ef6\uff0c\u5219\u5373\u4f7f\u5d4c\u5165\u8be5 applet \u7684\u7f51\u9875\u4f4d\u4e8e\u5176\u4ed6\u7ad9\u70b9\u4e0a\uff0c\u8be5\u6587\u4ef6\u4e5f\u4f1a\u88ab\u6267\u884c\u3002\u653b\u51fb\u8005\u53ef\u4ee5\u4f7f\u7528\u6587\u4ef6\u4e0a\u4f20\u51fd\u6570\uff0c\u4f7f\u7528\u6d3b\u52a8\u5185\u5bb9\u6765\u9020\u6210 XSS \u653b\u51fb\u3002",
+	"recommendation": "\u9650\u5236\u4e0a\u4f20\u53ef\u63a5\u53d7\u7684\u6587\u4ef6\u7c7b\u578b\uff1a\u68c0\u67e5\u6587\u4ef6\u6269\u5c55\u540d\uff0c\u5e76\u4ec5\u5141\u8bb8\u4e0a\u4f20\u7279\u5b9a\u6587\u4ef6\u3002\u4f7f\u7528\u767d\u540d\u5355\u65b9\u5f0f\uff0c\u800c\u4e0d\u662f\u9ed1\u540d\u5355\u65b9\u5f0f\u3002\u68c0\u67e5\u53cc\u91cd\u6269\u5c55\u540d\uff0c\u5982 .php.png\u3002\u68c0\u67e5\u6ca1\u6709\u6587\u4ef6\u540d\u7684\u6587\u4ef6\uff0c\u5982 .htaccess\uff08\u5728 ASP.NET \u4e0a\uff0c\u68c0\u67e5\u914d\u7f6e\u6587\u4ef6\uff0c\u5982 web.config\uff09\u3002\u5728\u4e0a\u4f20\u6587\u4ef6\u5939\u4e0a\u66f4\u6539\u6743\u9650\uff0c\u4ee5\u4f7f\u5176\u4e2d\u7684\u6587\u4ef6\u4e0d\u53ef\u6267\u884c\u3002\u5982\u679c\u53ef\u80fd\uff0c\u91cd\u547d\u540d\u5df2\u4e0a\u4f20\u7684\u6587\u4ef6\u3002",
+	"long_description": "",
+	"tags": ["abuse_of_functionality", "arbitrary_file_creation", "unauthenticated_file_upload", "CWE-79"],
+	"cvss2": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+	"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+	"cvss_score": 5.3,
+	"refs": [{
+		"name": "OWASP Unrestricted File Upload",
+		"url": "https://www.owasp.org/index.php/Unrestricted_File_Upload"
+	}, {
+		"name": "Why File Upload Forms are a major security threat",
+		"url": "https://www.acunetix.com/websitesecurity/upload-forms-threat/"
+	}],
+	"created": 1517160703,
+	"updated": 1647449009,
+	"app": "wvs",
+	"vuln_count": 2,
+	"type": "abuseoffunctionality"
+} {
+	"vt_id": "bca221d1-8581-3375-4097-66b0048ed088",
+	"app_id": "no_https.xml",
+	"name": "\u672a\u52a0\u5bc6\u7684\u8fde\u63a5",
+	"severity": 2,
+	"details_template": "",
+	"impact": "\u53ef\u80fd\u51fa\u73b0\u4fe1\u606f\u62ab\u9732\u3002",
+	"description": "\u6b64\u626b\u63cf\u76ee\u6807\u901a\u8fc7\u672a\u52a0\u5bc6\u7684\u8fde\u63a5\u8fdb\u884c\u8fde\u63a5\u3002\u6f5c\u5728\u653b\u51fb\u8005\u53ef\u4ee5\u62e6\u622a\u5e76\u4fee\u6539\u5f80\u8fd4\u6b64\u7ad9\u70b9\u7684\u6570\u636e\u3002",
+	"recommendation": "\u6b64\u7ad9\u70b9\u5e94\u901a\u8fc7\u5b89\u5168\u7684 (HTTPS) \u8fde\u63a5\u53d1\u9001\u548c\u63a5\u6536\u6570\u636e\u3002",
+	"long_description": "",
+	"tags": ["weak_crypto", "CWE-319"],
+	"cvss2": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+	"cvss_score": 5.4,
+	"refs": [],
+	"created": 1554108832,
+	"updated": 1596442291,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "weakcrypto"
+} {
+	"vt_id": "cce9a019-1bcb-333f-f560-b55d5bb28f3c",
+	"app_id": "trace_method_enabled.xml",
+	"name": "TRACE \u65b9\u6cd5\u5df2\u542f\u7528",
+	"severity": 1,
+	"details_template": "",
+	"impact": "\u653b\u51fb\u8005\u53ef\u80fd\u6ee5\u7528 HTTP TRACE \u529f\u80fd\u6765\u8bbf\u95ee HTTP \u62a5\u5934\u4e2d\u7684\u4fe1\u606f\uff0c\u4f8b\u5982 Cookie\u548c\u8eab\u4efd\u9a8c\u8bc1\u6570\u636e\u3002",
+	"description": "\u6b64 Web \u670d\u52a1\u5668\u4e0a\u542f\u7528\u4e86 HTTP TRACE \u65b9\u6cd5\u3002\u5982\u679c Web \u6d4f\u89c8\u5668\u4e2d\u5b58\u5728\u5176\u4ed6\u8de8\u57df\u6f0f\u6d1e\uff0c\u5219\u53ef\u4ee5\u4ece\u4efb\u4f55\u652f\u6301 HTTP TRACE \u65b9\u6cd5\u7684\u57df\u4e2d\u8bfb\u53d6\u654f\u611f\u7684\u62a5\u5934\u4fe1\u606f\u3002",
+	"recommendation": "\u5728 Web \u670d\u52a1\u5668\u4e0a\u7981\u7528 TRACE \u65b9\u6cd5\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-489"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "W3C - RFC 2616",
+		"url": "http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html"
+	}, {
+		"name": "US-CERT VU#867593",
+		"url": "https://www.kb.cert.org/vuls/id/867593/"
+	}, {
+		"name": "Cross-site tracing (XST)",
+		"url": "https://www.cgisecurity.com/lib/WH-WhitePaper_XST_ebook.pdf"
+	}],
+	"created": 1517160703,
+	"updated": 1626868555,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+} {
+	"vt_id": "b8e2c082-44f1-cf0b-0b8e-0e0bb357e798",
+	"app_id": "clickjacking_x_frame_options.xml",
+	"name": "\u70b9\u51fb\u52ab\u6301\uff1aX-Frame-Options \u62a5\u5934\u7f3a\u5931",
+	"severity": 1,
+	"details_template": "\u4e0d\u5305\u542b XFO \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul>{{#.}}<li>{{url}}</li><br/>{{/.}}</ul>",
+	"impact": "\u5f71\u54cd\u53d6\u51b3\u4e8e\u53d7\u5f71\u54cd\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u3002",
+	"description": "\u70b9\u51fb\u52ab\u6301\uff08\u7528\u6237\u754c\u9762\u77eb\u6b63\u653b\u51fb\u3001UI \u77eb\u6b63\u653b\u51fb\u3001UI \u77eb\u6b63\uff09\u662f\u4e00\u79cd\u6076\u610f\u6280\u672f\uff0c\u8bf1\u4f7f Web \u7528\u6237\u70b9\u51fb\u4e0e\u7528\u6237\u8ba4\u4e3a\u5176\u5355\u51fb\u7684\u5185\u5bb9\u4e0d\u540c\u7684\u5185\u5bb9\uff0c\u4ece\u800c\u5728\u5355\u51fb\u770b\u4f3c\u65e0\u5bb3\u7684\u7f51\u9875\u65f6\u6709\u53ef\u80fd\u5bfc\u81f4\u673a\u5bc6\u4fe1\u606f\u6cc4\u9732\u6216\u8ba1\u7b97\u673a\u88ab\u63a7\u5236 \u3002<br/><br/>\u670d\u52a1\u5668\u672a\u8fd4\u56de </strong>X-Frame-Options<strong> \u62a5\u5934\uff0c\u8fd9\u610f\u5473\u7740\u6b64\u7f51\u7ad9\u5b58\u5728\u906d\u53d7\u70b9\u51fb\u52ab\u6301\u653b\u51fb\u7684\u98ce\u9669\u3002X-Frame-Options HTTP \u54cd\u5e94\u62a5\u5934\u53ef\u88ab\u7528\u4e8e\u6307\u793a\u662f\u5426\u5e94\u5141\u8bb8\u6d4f\u89c8\u5668\u5728\u6846\u67b6\u6216 iframe \u5185\u5448\u73b0\u9875\u9762\u3002\u7ad9\u70b9\u53ef\u4ee5\u901a\u8fc7\u786e\u4fdd\u5176\u5185\u5bb9\u4e2d\u672a\u5d4c\u5165\u5176\u4ed6\u7f51\u7ad9\u6765\u907f\u514d\u70b9\u51fb\u52ab\u6301\u653b\u51fb\u3002",
+	"recommendation": "\u914d\u7f6e\u60a8\u7684 Web \u670d\u52a1\u5668\uff0c\u4f7f\u5176\u5305\u542b X-Frame-Options \u62a5\u5934\u548c\u5e26\u6709 frame-ancestors \u6307\u4ee4\u7684 CSP \u62a5\u5934\u3002\u6709\u5173\u8be5\u62a5\u5934\u53ef\u80fd\u503c\u7684\u66f4\u591a\u4fe1\u606f\uff0c\u8bf7\u67e5\u9605 Web \u53c2\u8003\u8d44\u6599\u3002",
+	"long_description": "",
+	"tags": ["abuse_of_functionality", "CWE-1021"],
+	"cvss2": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N",
+	"cvss_score": 5.8,
+	"refs": [{
+		"name": "The X-Frame-Options response header",
+		"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
+	}, {
+		"name": "Clickjacking",
+		"url": "https://en.wikipedia.org/wiki/Clickjacking"
+	}, {
+		"name": "OWASP Clickjacking",
+		"url": "https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html"
+	}, {
+		"name": "Frame Buster Buster",
+		"url": "https://stackoverflow.com/questions/958997/frame-buster-buster-buster-code-needed"
+	}],
+	"created": 1608725686,
+	"updated": 1624464437,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "abuseoffunctionality"
+} {
+	"vt_id": "a27a2f93-e096-4488-207e-76cb918e2613",
+	"app_id": "php_version_disclosure.xml",
+	"name": "PHP \u7248\u672c\u6cc4\u9732",
+	"severity": 0,
+	"details_template": "\u68c0\u6d4b\u7684\u7248\u672c\uff1a<strong>{{version}}</strong>\u3002",
+	"impact": "\u653b\u51fb\u8005\u53ef\u4ee5\u4f7f\u7528\u62ab\u9732\u7684\u4fe1\u606f\u83b7\u53d6\u6240\u786e\u8ba4\u7248\u672c\u7684\u7279\u5b9a\u5b89\u5168\u6f0f\u6d1e\u3002",
+	"description": "Web \u670d\u52a1\u5668\u6b63\u5728\u53d1\u9001 X-Powered-By\uff1a\u54cd\u5e94\u62a5\u5934\uff0c\u663e\u793a PHP \u7248\u672c\u3002",
+	"recommendation": "\u914d\u7f6e Web \u670d\u52a1\u5668\u4ee5\u9632\u6b62\u5176 HTTP \u54cd\u5e94\u7684\u4fe1\u606f\u6cc4\u9732\u3002",
+	"long_description": "",
+	"tags": [],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "PHP Documentation: header_remove()",
+		"url": "https://www.php.net/manual/en/function.header-remove.php"
+	}, {
+		"name": "PHP Documentation: php.ini directive expose_php",
+		"url": "https://www.php.net/manual/en/ini.core.php#ini.expose-php"
+	}],
+	"created": 1517160703,
+	"updated": 1626868555,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": ""
+} {
+	"vt_id": "38af8d00-253e-8e73-94c7-543bc513dd94",
+	"app_id": "crawler_file_upload.xml",
+	"name": "\u6587\u4ef6\u4e0a\u4f20",
+	"severity": 0,
+	"details_template": "\u5305\u542b\u4e0a\u4f20\u8868\u5355\u7684\u9875\u9762\uff1a<br/><ul>{{#.}}<li>{{url}} <br/><pre>{{match}}</pre></li>{{/.}}</ul>",
+	"impact": "\u5982\u679c\u672a\u5b89\u5168\u5730\u68c0\u67e5\u6240\u4e0a\u4f20\u7684\u6587\u4ef6\uff0c\u5219\u653b\u51fb\u8005\u53ef\u80fd\u4f1a\u4e0a\u4f20\u6076\u610f\u6587\u4ef6\u3002",
+	"description": "\u6b64\u9875\u9762\u5141\u8bb8\u8bbf\u5ba2\u4e0a\u4f20\u6587\u4ef6\u81f3\u670d\u52a1\u5668\u3002\u591a\u4e2a Web \u5e94\u7528\u7a0b\u5e8f\u5141\u8bb8\u7528\u6237\u4e0a\u4f20\u6587\u4ef6\uff08\u5982\u56fe\u7247\u3001\u56fe\u50cf\u3001\u58f0\u97f3\u7b49\uff09\u3002\u5982\u679c\u5904\u7406\u4e0d\u5f53\uff0c\u4e0a\u4f20\u7684\u6587\u4ef6\u53ef\u80fd\u4f1a\u5e26\u6765\u5f88\u5927\u7684\u98ce\u9669\u3002\u8fdc\u7a0b\u653b\u51fb\u8005\u53ef\u80fd\u53d1\u9001\u5e26\u6709\u7279\u5236\u6587\u4ef6\u540d\u6216 mime \u7c7b\u578b\u7684 multipart/form-data POST \u8bf7\u6c42\u5e76\u6267\u884c\u4efb\u610f\u4ee3\u7801\u3002",
+	"recommendation": "\u9650\u5236\u4e0a\u4f20\u53ef\u63a5\u53d7\u7684\u6587\u4ef6\u7c7b\u578b\uff1a\u68c0\u67e5\u6587\u4ef6\u6269\u5c55\u540d\uff0c\u5e76\u4ec5\u5141\u8bb8\u4e0a\u4f20\u7279\u5b9a\u6587\u4ef6\u3002\u4f7f\u7528\u767d\u540d\u5355\u65b9\u5f0f\uff0c\u800c\u4e0d\u662f\u9ed1\u540d\u5355\u65b9\u5f0f\u3002\u68c0\u67e5\u53cc\u91cd\u6269\u5c55\u540d\uff0c\u5982 .php.png\u3002\u68c0\u67e5\u6ca1\u6709\u6587\u4ef6\u540d\u7684\u6587\u4ef6\uff0c\u5982 .htaccess\uff08\u5728 ASP.NET \u4e0a\uff0c\u68c0\u67e5\u914d\u7f6e\u6587\u4ef6\uff0c\u5982 web.config\uff09\u3002\u5728\u4e0a\u4f20\u6587\u4ef6\u5939\u4e0a\u66f4\u6539\u6743\u9650\uff0c\u4ee5\u4f7f\u5176\u4e2d\u7684\u6587\u4ef6\u4e0d\u53ef\u6267\u884c\u3002\u5982\u679c\u53ef\u80fd\uff0c\u91cd\u547d\u540d\u5df2\u4e0a\u4f20\u7684\u6587\u4ef6\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-16"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [],
+	"created": 1517160926,
+	"updated": 1596020212,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+} {
+	"vt_id": "3f6a8a0e-07f2-af81-54ff-61020299caeb",
+	"app_id": "no_http_redirection.xml",
+	"name": "\u65e0 HTTP \u91cd\u5b9a\u5411",
+	"severity": 0,
+	"details_template": "",
+	"impact": "\u5728\u67d0\u4e9b\u60c5\u51b5\u4e0b\uff0c\u5176\u53ef\u7528\u4e8e\u4e2d\u95f4\u4eba (MitM) \u653b\u51fb",
+	"description": "\u68c0\u6d4b\u5230\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4f7f\u7528 HTTP \u534f\u8bae\uff0c\u4f46\u672a\u81ea\u52a8\u5c06\u7528\u6237\u91cd\u5b9a\u5411\u5230 HTTPS\u3002",
+	"recommendation": "\u5efa\u8bae\u5728\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u5b9e\u65bd HTTP \u91cd\u5b9a\u5411\u6700\u4f73\u5b9e\u8df5\u3002\u8bf7\u67e5\u8be2\u7f51\u7edc\u53c2\u8003\u6587\u4ef6\u4ee5\u4e86\u89e3\u66f4\u591a\u4fe1\u606f",
+	"long_description": "",
+	"tags": ["CWE-16"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "HTTP Redirections",
+		"url": "https://infosec.mozilla.org/guidelines/web_security#http-redirections"
+	}],
+	"created": 1600900764,
+	"updated": 1601991852,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": ""
+} {
+	"vt_id": "011055fc-94f1-ab96-56ac-53117c56fb4d",
+	"app_id": "csp_not_implemented.xml",
+	"name": "\u672a\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)",
+	"severity": 0,
+	"details_template": "\u4e0d\u5305\u542b CSP \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul>{{#.}}<li>{{url}}</li><br/>{{/.}}</ul>",
+	"impact": "CSP \u53ef\u7528\u4e8e\u9884\u9632\u548c/\u6216\u7f13\u89e3\u6d89\u53ca\u5185\u5bb9/\u4ee3\u7801\u6ce8\u5165\u7684\u653b\u51fb\uff0c\u4f8b\u5982\u8de8\u7ad9\u811a\u672c/XSS \u653b\u51fb\u3001\u9700\u8981\u5d4c\u5165\u6076\u610f\u8d44\u6e90\u7684\u653b\u51fb\u3001\u6d89\u53ca\u6076\u610f\u4f7f\u7528 iframe \u7684\u653b\u51fb\uff08\u4f8b\u5982\u70b9\u51fb\u52ab\u6301\u653b\u51fb\uff09\u7b49\u3002",
+	"description": "\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP) \u589e\u52a0\u4e86\u989d\u5916\u7684\u5b89\u5168\u5c42\uff0c\u6709\u52a9\u4e8e\u68c0\u6d4b\u548c\u7f13\u89e3\u67d0\u4e9b\u7c7b\u578b\u7684\u653b\u51fb\uff0c\u5305\u62ec\u8de8\u7ad9\u811a\u672c (XSS) \u548c\u6570\u636e\u6ce8\u5165\u653b\u51fb\u3002<br/><br/>\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP) \u53ef\u901a\u8fc7\u6dfb\u52a0 <strong>Content-Security-Policy</strong> \u62a5\u5934\u5b9e\u65bd\u3002\u6b64\u62a5\u5934\u7684\u503c\u662f\u4e00\u4e2a\u5b57\u7b26\u4e32\uff0c\u5176\u4e2d\u5305\u542b\u63cf\u8ff0\u5185\u5bb9\u5b89\u5168\u7b56\u7565\u7684\u7b56\u7565\u6307\u4ee4\u3002\u8981\u5b9e\u65bd CSP\uff0c\u60a8\u5e94\u8be5\u4e3a\u7ad9\u70b9\u4f7f\u7528\u7684\u6240\u6709\u8d44\u6e90\u7c7b\u578b\u5b9a\u4e49\u5141\u8bb8\u7684\u6765\u6e90\u5217\u8868\u3002\u4f8b\u5982\uff0c\u5982\u679c\u60a8\u6709\u4e00\u4e2a\u7b80\u5355\u7684\u7ad9\u70b9\uff0c\u9700\u8981\u4ece CDN \u52a0\u8f7d\u672c\u5730\u6258\u7ba1\u548c jQuery \u5e93\u4e2d\u7684\u811a\u672c\u3001\u6837\u5f0f\u8868\u548c\u56fe\u50cf\uff0c\u5219 CSP \u62a5\u5934\u53ef\u80fd\u5982\u4e0b\u6240\u793a\uff1a<pre><code> Content-Security-Policy: default-src 'self'; script-src 'self' https://code.jquery.com; </code></pre> <br/><br/>\u68c0\u6d4b\u5230\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u672a\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)\uff0c\u56e0\u4e3a\u54cd\u5e94\u4e2d\u7f3a\u5c11 CSP \u62a5\u5934\u3002\u5efa\u8bae\u5728\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)\u3002",
+	"recommendation": "\u5efa\u8bae\u5728\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)\u3002\u914d\u7f6e\u5185\u5bb9\u5b89\u5168\u7b56\u7565\u6d89\u53ca\u6dfb\u52a0 <strong>Content-Security-Policy</strong> HTTP \u62a5\u5934\u5230 Web \u9875\u9762\u5e76\u4e3a\u5176\u8d4b\u503c\uff0c\u4ee5\u63a7\u5236\u5141\u8bb8\u7528\u6237\u4ee3\u7406\u4e3a\u8be5\u9875\u9762\u52a0\u8f7d\u7684\u8d44\u6e90\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-1021"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "Content Security Policy (CSP)",
+		"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+	}, {
+		"name": "Implementing Content Security Policy",
+		"url": "https://hacks.mozilla.org/2016/02/implementing-content-security-policy/"
+	}],
+	"created": 1537256546,
+	"updated": 1636020173,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+} {
+	"loc_id": 2,
+	"scan_session_id": "0f5a7add-4822-40e3-8f85-103a1d61dded",
+	"name": "http://192.168.0.177/",
+	"parent_id": null,
+	"source_id": 2,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/",
+	"loc_type": "folder",
+	"input_data": [{
+		"variations": 4,
+		"method": "GET",
+		"groups": [{
+			"type": "Path Fragment",
+			"input_names": ["/pikachu-master/vul/unsafeupload/[*].php"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/"
+} {
+	"loc_id": 6,
+	"scan_session_id": "0f5a7add-4822-40e3-8f85-103a1d61dded",
+	"name": "pikachu-master",
+	"parent_id": 2,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/pikachu-master/",
+	"loc_type": "folder",
+	"input_data": null,
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/"
+} {
+	"loc_id": 7,
+	"scan_session_id": "0f5a7add-4822-40e3-8f85-103a1d61dded",
+	"name": "vul",
+	"parent_id": 6,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/pikachu-master/vul/",
+	"loc_type": "folder",
+	"input_data": null,
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/"
+} {
+	"loc_id": 8,
+	"scan_session_id": "0f5a7add-4822-40e3-8f85-103a1d61dded",
+	"name": "unsafeupload",
+	"parent_id": 7,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": ["static", "stable404", "found"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/unsafeupload/",
+	"loc_type": "folder",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/"
+} {
+	"loc_id": 9,
+	"scan_session_id": "0f5a7add-4822-40e3-8f85-103a1d61dded",
+	"name": "clientcheck.php",
+	"parent_id": 8,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": ["_linked"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/unsafeupload/clientcheck.php",
+	"loc_type": "file",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 2,
+		"method": "POST",
+		"contentType": "multipart/form-data",
+		"groups": [{
+			"type": "POST (multipart)",
+			"input_names": ["uploadfile"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "POST",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "POST",
+		"contentType": "multipart/form-data",
+		"groups": [{
+			"type": "POST (multipart)",
+			"input_names": ["submit", "uploadfile"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php"
+} {
+	"loc_id": 40,
+	"scan_session_id": "0f5a7add-4822-40e3-8f85-103a1d61dded",
+	"name": "getimagesize.php",
+	"parent_id": 8,
+	"source_id": 11,
+	"root_id": 2,
+	"tags": ["_linked"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/unsafeupload/getimagesize.php",
+	"loc_type": "file",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 2,
+		"method": "POST",
+		"contentType": "multipart/form-data",
+		"groups": [{
+			"type": "POST (multipart)",
+			"input_names": ["uploadfile"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "POST",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "POST",
+		"contentType": "multipart/form-data",
+		"groups": [{
+			"type": "POST (multipart)",
+			"input_names": ["submit", "uploadfile"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/getimagesize.php"
+} {
+	"loc_id": 43,
+	"scan_session_id": "0f5a7add-4822-40e3-8f85-103a1d61dded",
+	"name": "servercheck.php",
+	"parent_id": 8,
+	"source_id": 11,
+	"root_id": 2,
+	"tags": ["_linked"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/unsafeupload/servercheck.php",
+	"loc_type": "file",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "POST",
+		"contentType": "multipart/form-data",
+		"groups": [{
+			"type": "POST (multipart)",
+			"input_names": ["uploadfile"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "POST",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "POST",
+		"contentType": "multipart/form-data",
+		"groups": [{
+			"type": "POST (multipart)",
+			"input_names": ["submit", "uploadfile"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/servercheck.php"
+} {
+	"loc_id": 46,
+	"scan_session_id": "0f5a7add-4822-40e3-8f85-103a1d61dded",
+	"name": "upload.php",
+	"parent_id": 8,
+	"source_id": 11,
+	"root_id": 2,
+	"tags": ["_linked"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/unsafeupload/upload.php",
+	"loc_type": "file",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/upload.php"
+} {
+	"loc_url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php",
+	"vt_id": "5b3895f4-9656-d13f-8a83-5d9dabcdadf5",
+	"vuln_hash": "3af9cc3a-5fec-4071-7bee-a113afba68cf",
+	"request": "GET /pikachu-master/vul/unsafeupload/uploads/AcuTest9378.htm HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Scripts/PerScheme/File_Upload.script",
+	"loc_id": 9,
+	"details": "\u5df2\u6210\u529f\u4e0a\u4f20\u6587\u4ef6 <strong><span class=\\\"bb-dark\\\">AcuTest9378.htm</span></strong>\uff0c\u5185\u5bb9\u7c7b\u578b\u4e3a <strong><span class=\\\"bb-dark\\\">text/html</span></strong>\u3002<br/>\u6587\u4ef6\u4f4d\u4e8e\uff1a<strong><span class=\\\"bb-dark\\\">/pikachu-master/vul/unsafeupload/uploads/AcuTest9378.htm</span></strong>\u3002",
+	"app_id": "file_upload.xml",
+	"loc_detail": "uploadfile",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:38.439304+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php",
+	"name": "\u4e0d\u53d7\u9650\u5236\u7684\u6587\u4ef6\u4e0a\u4f20",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/servercheck.php",
+	"vt_id": "5b3895f4-9656-d13f-8a83-5d9dabcdadf5",
+	"vuln_hash": "c2889cce-f56f-7a02-5292-f9689355a3d0",
+	"request": "GET /pikachu-master/vul/unsafeupload/uploads/AcuTest5708.htm HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Scripts/PerScheme/File_Upload.script",
+	"loc_id": 43,
+	"details": "\u5df2\u6210\u529f\u4e0a\u4f20\u6587\u4ef6 <strong><span class=\\\"bb-dark\\\">AcuTest5708.htm</span></strong>\uff0c\u5185\u5bb9\u7c7b\u578b\u4e3a <strong><span class=\\\"bb-dark\\\">image/jpeg</span></strong>\u3002<br/>\u6587\u4ef6\u4f4d\u4e8e\uff1a<strong><span class=\\\"bb-dark\\\">/pikachu-master/vul/unsafeupload/uploads/AcuTest5708.htm</span></strong>\u3002",
+	"app_id": "file_upload.xml",
+	"loc_detail": "uploadfile",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:47.447700+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/servercheck.php",
+	"name": "\u4e0d\u53d7\u9650\u5236\u7684\u6587\u4ef6\u4e0a\u4f20",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php",
+	"vt_id": "c2e0724e-0fcc-0a5c-3811-3cb782d129b0",
+	"vuln_hash": "2e21c5d9-6906-2ff1-fd87-f1325f1c1ac2",
+	"request": "GET /pikachu-master/vul/unsafeupload/uploads/AcuTest7511.svg HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Scripts/PerScheme/File_Upload.script",
+	"loc_id": 9,
+	"details": "\u5df2\u6210\u529f\u4e0a\u4f20\u6587\u4ef6 <strong><span class=\\\"bb-dark\\\">AcuTest7511.svg</span></strong>\uff0c\u5185\u5bb9\u7c7b\u578b\u4e3a <strong><span class=\\\"bb-dark\\\">application/xml</span></strong>\u3002<br/>\u6587\u4ef6\u4f4d\u4e8e\uff1a<strong><span class=\\\"bb-dark\\\">/pikachu-master/vul/unsafeupload/uploads/AcuTest7511.svg</span></strong>\u3002 ",
+	"app_id": "file_upload_xss.xml",
+	"loc_detail": "uploadfile",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:38.424510+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php",
+	"name": "\u6587\u4ef6\u4e0a\u4f20 XSS",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php",
+	"vt_id": "b0a22c24-2a9a-5a75-323e-3231fe2c7f4d",
+	"vuln_hash": "7843dbd5-44d8-3dd6-4e3d-9bdbc408c24a",
+	"request": "GET /pikachu-master/vul/unsafeupload/uploads/Applet715.class HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Scripts/PerScheme/File_Upload.script",
+	"loc_id": 9,
+	"details": "\u5df2\u6210\u529f\u4e0a\u4f20\u6587\u4ef6 <strong><span class=\\\"bb-dark\\\">Applet715.class</span></strong>\uff0c\u5185\u5bb9\u7c7b\u578b\u4e3a <strong><span class=\\\"bb-dark\\\">image/jpeg</span></strong>\u3002<br/>\u6587\u4ef6\u4f4d\u4e8e\uff1a<strong><span class=\\\"bb-dark\\\">/pikachu-master/vul/unsafeupload/uploads/Applet715.class</span></strong>\u3002",
+	"app_id": "applet_file_upload.xml",
+	"loc_detail": "uploadfile",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:38.409135+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php",
+	"name": "\u6587\u4ef6\u4e0a\u4f20 XSS (Java applet)",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/servercheck.php",
+	"vt_id": "b0a22c24-2a9a-5a75-323e-3231fe2c7f4d",
+	"vuln_hash": "6c653bf8-8756-8067-b771-500d361400aa",
+	"request": "GET /pikachu-master/vul/unsafeupload/uploads/Applet8516.class HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Scripts/PerScheme/File_Upload.script",
+	"loc_id": 43,
+	"details": "\u5df2\u6210\u529f\u4e0a\u4f20\u6587\u4ef6 <strong><span class=\\\"bb-dark\\\">Applet8516.class</span></strong>\uff0c\u5185\u5bb9\u7c7b\u578b\u4e3a <strong><span class=\\\"bb-dark\\\">image/jpeg</span></strong>\u3002<br/>\u6587\u4ef6\u4f4d\u4e8e\uff1a<strong><span class=\\\"bb-dark\\\">/pikachu-master/vul/unsafeupload/uploads/Applet8516.class</span></strong>\u3002",
+	"app_id": "applet_file_upload.xml",
+	"loc_detail": "uploadfile",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:47.436329+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/pikachu-master/vul/unsafeupload/servercheck.php",
+	"name": "\u6587\u4ef6\u4e0a\u4f20 XSS (Java applet)",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "bca221d1-8581-3375-4097-66b0048ed088",
+	"vuln_hash": "02baec27-b6a7-5c66-b943-29729ef2bb62",
+	"request": "GET /pikachu-master/vul/unsafeupload/ HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/unsafeupload/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/RPA/no_https.js",
+	"loc_id": 2,
+	"details": "",
+	"app_id": "no_https.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:05.224488+08:00",
+	"status": "open",
+	"tags": ["confidence.100", "verified"],
+	"url": "http://192.168.0.177/",
+	"name": "\u672a\u52a0\u5bc6\u7684\u8fde\u63a5",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "cce9a019-1bcb-333f-f560-b55d5bb28f3c",
+	"vuln_hash": "6f4f68d8-4476-85f4-d672-6528db15b906",
+	"request": "TRACE /2utBjLBvxl HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Scripts/PerServer/Track_Trace_Server_Methods.script",
+	"loc_id": 2,
+	"details": "",
+	"app_id": "trace_method_enabled.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:02.588733+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "TRACE \u65b9\u6cd5\u5df2\u542f\u7528",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "b8e2c082-44f1-cf0b-0b8e-0e0bb357e798",
+	"vuln_hash": "23d0ac27-a49a-aae3-5e3f-9037d89620cc",
+	"request": "GET /pikachu-master/vul/unsafeupload/clientcheck.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/httpdata/X_Frame_Options_not_implemented.js",
+	"loc_id": 2,
+	"details": "\u4e0d\u5305\u542b XFO \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/getimagesize.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/servercheck.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/upload.php</li><br/></ul>",
+	"app_id": "clickjacking_x_frame_options.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:07.252915+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u70b9\u51fb\u52ab\u6301\uff1aX-Frame-Options \u62a5\u5934\u7f3a\u5931",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "a27a2f93-e096-4488-207e-76cb918e2613",
+	"vuln_hash": "ab71a37c-d117-3974-63df-ab8ee3c22114",
+	"request": "",
+	"source": "/Scripts/PerServer/Version_Check.script",
+	"loc_id": 2,
+	"details": "\u68c0\u6d4b\u7684\u7248\u672c\uff1a<strong>PHP/7.0.9</strong>\u3002",
+	"app_id": "php_version_disclosure.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:03.217254+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "PHP \u7248\u672c\u6cc4\u9732",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+} {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "38af8d00-253e-8e73-94c7-543bc513dd94",
+	"vuln_hash": "3c55aafe-dc37-52e0-7720-6b4d8d5c8c41",
+	"request": "GET /pikachu-master/vul/unsafeupload/clientcheck.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Crawler/12-Crawler_File_Upload.js",
+	"loc_id": 2,
+	"details": "\u5305\u542b\u4e0a\u4f20\u8868\u5355\u7684\u9875\u9762\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php <br/><pre>Form name: &lt;empty&gt;\nForm action: &lt;empty&gt;\nForm method: POST\nForm file input: uploadfile [file]\n</pre></li><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/getimagesize.php <br/><pre>Form name: &lt;empty&gt;\nForm action: &lt;empty&gt;\nForm method: POST\nForm file input: uploadfile [file]\n</pre></li><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/servercheck.php <br/><pre>Form name: &lt;empty&gt;\nForm action: &lt;empty&gt;\nForm method: POST\nForm file input: uploadfile [file]\n</pre></li></ul>",
+	"app_id": "crawler_file_upload.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:07.443206+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u6587\u4ef6\u4e0a\u4f20",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "3f6a8a0e-07f2-af81-54ff-61020299caeb",
+	"vuln_hash": "87c93102-0d82-4121-3f27-c42a05b4a1ae",
+	"request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/target/http_redirections.js",
+	"loc_id": 2,
+	"details": "",
+	"app_id": "no_http_redirection.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:01.286941+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u65e0 HTTP \u91cd\u5b9a\u5411",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "011055fc-94f1-ab96-56ac-53117c56fb4d",
+	"vuln_hash": "7b9fe62e-5c1c-458e-9c74-db772042c946",
+	"request": "GET /pikachu-master/vul/unsafeupload/clientcheck.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/httpdata/CSP_not_implemented.js",
+	"loc_id": 2,
+	"details": "\u4e0d\u5305\u542b CSP \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/clientcheck.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/getimagesize.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/servercheck.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/unsafeupload/upload.php</li><br/></ul>",
+	"app_id": "csp_not_implemented.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:06.928068+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u672a\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"host": "192.168.0.177",
+	"start_date": "2023-02-03T08:59:47.987017+08:00",
+	"end_date": "2023-02-03T09:08:32.753920+08:00",
+	"start_url": "http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php",
+	"duration": "0:08:42",
+	"vuln_selection": false,
+	"profile": "Full Scan",
+	"source_type": "scans",
+	"build": "14.7.220401065",
+	"progress": 100,
+	"avg_response_time": 2,
+	"max_response_time": 19043,
+	"locations_found": 8,
+	"request_count": 4183,
+	"responsive": true,
+	"technologies": ["PHP"],
+	"os": "Unknown",
+	"server": "Apache/2.4.39 (Win64) OpenSSL/1.1.1b mod_fcgid/2.3.9a mod_log_rotate/1.02",
+	"sensor_detected": null,
+	"hosts_discovered": ["http://192.168.0.177", "https://www.xp.cn"],
+	"is_starting_host": true
+} {
+	"vt_id": "49cbbd86-c0fc-270b-d5d0-abc476265ef6",
+	"app_id": "cmd_hijack_windows.xml",
+	"name": "Cmd \u52ab\u6301\u6f0f\u6d1e",
+	"severity": 3,
+	"details_template": "{{input_type}} \u8f93\u5165 <strong><span class=\\\"bb-dark\\\">{{input_name}}</span></strong> \u5df2\u8bbe\u7f6e\u4e3a <strong><span class=\\\"bb-dark\\\">{{test_value}}</span></strong><br/><br/>{{#matched_text}}\u53ef\u80fd\u51fa\u73b0\u7684\u6267\u884c\u7ed3\u679c\uff1a<pre><span class=\\\"bb-blue\\\">{{.}}</span></pre>{{/matched_text}} {{#reflection_point}}\u8f93\u5165\u53cd\u6620\u5728\u4ee5\u4e0b\u4f4d\u7f6e\uff1a<strong><span class=\\\"bb-dark\\\">{{.}}</span></strong>{{/reflection_point}}",
+	"impact": "\u6076\u610f\u7528\u6237\u53ef\u4ee5\u5229\u7528 Web \u670d\u52a1\u5668\u7684\u6743\u9650\u542f\u52a8\u4efb\u610f\u7cfb\u7edf\u53ef\u6267\u884c\u6587\u4ef6\u3002",
+	"description": "\u6b64\u811a\u672c\u53ef\u80fd\u5bb9\u6613\u53d7\u5230 Cmd \u52ab\u6301\u653b\u51fb\u3002<br/><br/> Cmd \u52ab\u6301\u662f cmd.exe \u4e2d\u7684\u547d\u4ee4/\u53c2\u6570\u6df7\u6dc6\uff0c\u8ba9\u653b\u51fb\u8005\u80fd\u591f\u542f\u52a8\u4efb\u610f Windows \u7cfb\u7edf\u53ef\u6267\u884c\u6587\u4ef6\u3002\u5f53\u653b\u51fb\u8005\u4f7f\u7528\u8def\u5f84\u904d\u5386\u5e8f\u5217\u52ab\u6301\u5e94\u6267\u884c\u7684\u539f\u59cb\u547d\u4ee4\u65f6\uff0c\u4f1a\u51fa\u73b0\u6b64\u95ee\u9898\u3002\u5176\u4ec5\u5f71\u54cd Windows \u7cfb\u7edf\u3002<br/><br/> \u4f8b\u5982\uff0c\u4ee5\u4e0b\u547d\u4ee4\uff1a<pre>cmd.exe /c &quot;ping 127.0.0.1/../../../../../../../../../../windows/system32/calc.exe&quot;</pre> \u5c06\u542f\u52a8 <strong>calc.exe</strong> \u800c\u975e ping.exe\u3002",
+	"recommendation": "\u60a8\u7684\u811a\u672c\u5e94\u7b5b\u9009\u6765\u81ea\u7528\u6237\u8f93\u5165\u7684\u5143\u5b57\u7b26\u3002PHP Web \u5e94\u7528\u7a0b\u5e8f\u5e94\u4f7f\u7528 <strong>escapeshellarg()</strong> \u800c\u975e <strong>escapeshellcmd()</strong>\u3002",
+	"long_description": "",
+	"tags": ["code_execution", "CWE-94"],
+	"cvss2": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+	"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+	"cvss_score": 9.1,
+	"refs": [{
+		"name": "Cmd Hijack",
+		"url": "https://hackingiscool.pl/cmdhijack-command-argument-confusion-with-path-traversal-in-cmd-exe/"
+	}],
+	"created": 1591967957,
+	"updated": 1626868555,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "codeexecution"
+} {
+	"vt_id": "38507657-34e5-f283-ca2b-e9ecedd5a530",
+	"app_id": "php_code_injection.xml",
+	"name": "PHP \u4ee3\u7801\u6ce8\u5165",
+	"severity": 3,
+	"details_template": "{{input_type}} \u8f93\u5165 <strong><span class=\\\"bb-dark\\\">{{input_name}}</span></strong> \u5df2\u8bbe\u7f6e\u4e3a <strong><span class=\\\"bb-dark\\\">{{test_value}}</span></strong><br/><br/> {{#matched_text}}\u53ef\u80fd\u51fa\u73b0\u7684\u6267\u884c\u7ed3\u679c\uff1a<pre><span class=\\\"bb-blue\\\">{{.}}</span></pre>{{/matched_text}} {{#reflection_point}}\u8f93\u5165\u53cd\u6620\u5728\u4ee5\u4e0b\u4f4d\u7f6e\uff1a<strong><span class=\\\"bb-dark\\\">{{.}}</span></strong>{{/reflection_point}} {{#proof_title}}<strong>\u5229\u7528\u8bc1\u660e</strong><br/>{{proof_title}}<br/><pre>{{proof_contents}}</pre>{{/proof_title}}",
+	"impact": "\u653b\u51fb\u8005\u53ef\u4ee5\u5728\u60a8\u7684\u670d\u52a1\u5668\u4e0a\u6267\u884c\u4efb\u4f55 PHP \u4ee3\u7801\u3002",
+	"description": "\u6b64\u811a\u672c\u5bb9\u6613\u53d7\u5230 PHP \u4ee3\u7801\u6ce8\u5165\u7684\u653b\u51fb\u3002<br/><br/>PHP \u4ee3\u7801\u6ce8\u5165\u662f\u4e00\u79cd\u6f0f\u6d1e\uff0c\u5141\u8bb8\u653b\u51fb\u8005\u5c06\u81ea\u5b9a\u4e49\u4ee3\u7801\u6ce8\u5165\u5230\u670d\u52a1\u5668\u7aef\u811a\u672c\u5f15\u64ce\u3002\u5f53\u653b\u51fb\u8005\u53ef\u4ee5\u63a7\u5236\u8f93\u5165\u5230 eval() \u51fd\u6570\u8c03\u7528\u4e2d\u7684\u5168\u90e8\u6216\u90e8\u5206\u8f93\u5165\u5b57\u7b26\u4e32\u65f6\uff0c\u5c31\u4f1a\u53d1\u751f\u6b64\u6f0f\u6d1e\u3002Eval \u4f1a\u5c06\u53c2\u6570\u4f5c\u4e3a\u4ee3\u7801\u6267\u884c\u3002",
+	"recommendation": "\u60a8\u7684\u811a\u672c\u5e94\u9002\u5f53\u6e05\u7406\u7528\u6237\u8f93\u5165\u3002",
+	"long_description": "",
+	"tags": ["code_execution", "CWE-94"],
+	"cvss2": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+	"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+	"cvss_score": 9.1,
+	"refs": [{
+		"name": "Dynamic Evaluation Vulnerabilities in PHP applications",
+		"url": "https://seclists.org/fulldisclosure/2006/May/35"
+	}, {
+		"name": "OWASP PHP Top 5",
+		"url": "https://www.owasp.org/index.php/PHP_Top_5"
+	}],
+	"created": 1517160703,
+	"updated": 1647449009,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "codeexecution"
+} {
+	"vt_id": "2648b2a5-e4dc-ca70-cbb5-b7513459c75a",
+	"app_id": "code_execution.xml",
+	"name": "\u4ee3\u7801\u6267\u884c",
+	"severity": 3,
+	"details_template": "{{input_type}} \u8f93\u5165 <strong><span class=\\\"bb-dark\\\">{{input_name}}</span></strong> \u5df2\u8bbe\u7f6e\u4e3a <strong><span class=\\\"bb-dark\\\">{{test_value}}</span></strong><br/><br/> {{#details}}\u5df2\u4e3a <strong>.bxss.me</strong> \u5b50\u57df\u53d1\u8d77\u4e00\u4e2a DNS \u8bf7\u6c42\uff0c\u8fd9\u8868\u793a\u8be5 Web \u5e94\u7528\u7a0b\u5e8f\u5bb9\u6613\u53d7\u5230 RCE \u7684\u653b\u51fb\u3002<br/> DNS \u8bf7\u6c42\u8be6\u7ec6\u4fe1\u606f\uff1a<br/><pre><span class=\\\"bb-blue\\\">{{.}}</span></pre>{{/details}} {{#matched_text}}\u53ef\u80fd\u51fa\u73b0\u7684\u6267\u884c\u7ed3\u679c\uff1a<pre><span class=\\\"bb-blue\\\">{{.}}</span></pre>{{/matched_text}} {{#reflection_point}}\u8f93\u5165\u53cd\u6620\u5728\u4ee5\u4e0b\u4f4d\u7f6e\uff1a<strong><span class=\\\"bb-dark\\\">{{.}}</span></strong>{{/reflection_point}} {{#proof_title}}<strong>\u5229\u7528\u8bc1\u660e</strong><br/>{{proof_title}}<br/><pre>{{proof_contents}}</pre>{{/proof_title}}",
+	"impact": "\u6076\u610f\u7528\u6237\u53ef\u4ee5\u5229\u7528 Web \u670d\u52a1\u5668\u7684\u6743\u9650\u6267\u884c\u4efb\u610f\u7cfb\u7edf\u547d\u4ee4\u3002",
+	"description": "\u6b64\u811a\u672c\u53ef\u80fd\u5bb9\u6613\u53d7\u5230\u4ee3\u7801\u6267\u884c\u653b\u51fb\u7684\u653b\u51fb\u3002<br/><br/>\u5f53\u53ef\u4ee5\u64cd\u7eb5 Web \u5e94\u7528\u7a0b\u5e8f\u63d0\u4f9b\u7684\u8f93\u5165\u6216\u5185\u5bb9\uff0c\u4f7f\u5176\u89e6\u53d1\u670d\u52a1\u5668\u7aef\u4ee3\u7801\u6267\u884c\u65f6\uff0c\u4f1a\u53d1\u751f\u4ee3\u7801\u6ce8\u5165\u6f0f\u6d1e\u3002\u5728\u4e00\u4e9b\u5199\u5f97\u4e0d\u597d\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\uff0c\u7528\u6237\u53ef\u4ee5\u4fee\u6539\u670d\u52a1\u5668\u7aef\u6587\u4ef6\uff08\u4f8b\u5982\u53d1\u5e03\u81f3\u7559\u8a00\u677f\u6216\u8bbf\u5ba2\u7559\u8a00\u7c3f\uff09\uff0c\u6709\u65f6\u53ef\u4ee5\u5c06\u4ee3\u7801\u6ce8\u5165\u5230\u5e94\u7528\u7a0b\u5e8f\u672c\u8eab\u7684\u811a\u672c\u8bed\u8a00\u4e2d\u3002",
+	"recommendation": "\u60a8\u7684\u811a\u672c\u5e94\u7b5b\u9009\u6765\u81ea\u7528\u6237\u8f93\u5165\u7684\u5143\u5b57\u7b26\u3002",
+	"long_description": "",
+	"tags": ["code_execution", "acumonitor", "CWE-94"],
+	"cvss2": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+	"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+	"cvss_score": 9.1,
+	"refs": [{
+		"name": "Security Focus - Penetration Testing for Web Applications (Part Two)",
+		"url": "https://www.symantec.com/connect/articles/penetration-testing-web-applications-part-two"
+	}, {
+		"name": "OWASP PHP Top 5",
+		"url": "https://www.owasp.org/index.php/PHP_Top_5"
+	}],
+	"created": 1517160703,
+	"updated": 1647449009,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "codeexecution"
+} {
+	"vt_id": "7a2fa5a4-7125-1062-0651-ed5219f05809",
+	"app_id": "xss.xml",
+	"name": "\u8de8\u7ad9\u811a\u672c",
+	"severity": 3,
+	"details_template": "{{#repro}}<div class=\\\"bb-coolbox\\\"><span class=\\\"bb-dark\\\">{{.}}</span></div><br/>{{/repro}} {{#uri}}URI \u5df2\u8bbe\u7f6e\u4e3a <strong><span class=\\\"bb-dark\\\">{{uri}}</span></strong>{{/uri}} {{#input_type}} {{input_type}} \u8f93\u5165 <strong><span class=\\\"bb-dark\\\">{{input_name}}</span></strong> \u5df2\u8bbe\u7f6e\u4e3a <strong><span class=\\\"bb-dark\\\">{{test_value}}</span></strong><br/> {{#reflection_point}}\u8f93\u5165\u53cd\u6620\u5728\u4ee5\u4e0b\u4f4d\u7f6e\uff1a<strong><span class=\\\"bb-dark\\\">{{.}}</span></strong>{{/reflection_point}} {{/input_type}} {{#extra_details}}<br/>{{.}}{{/extra_details}}",
+	"impact": "\u6076\u610f JavaScript \u53ef\u4ee5\u8bbf\u95ee\u4e0e\u7f51\u9875\u5176\u4f59\u90e8\u5206\u76f8\u540c\u7684\u6240\u6709\u5bf9\u8c61\uff0c\u5305\u62ec\u8bbf\u95ee cookie \u548c\u672c\u5730\u5b58\u50a8\uff08\u901a\u5e38\u7528\u4e8e\u5b58\u50a8\u4f1a\u8bdd\u4ee4\u724c\uff09\u3002\u5982\u679c\u653b\u51fb\u8005\u53ef\u4ee5\u83b7\u53d6\u7528\u6237\u7684\u4f1a\u8bdd cookie\uff0c\u5219\u4ed6\u4eec\u53ef\u4ee5\u5192\u5145\u8be5\u7528\u6237\u3002<br/><br/>\u6b64\u5916\uff0cJavaScript \u53ef\u4ee5\u8bfb\u53d6\u5411\u7528\u6237\u663e\u793a\u7684\u9875\u9762\u5185\u5bb9\u5e76\u8fdb\u884c\u4efb\u610f\u4fee\u6539\u3002\u56e0\u6b64\uff0cXSS \u4e0e\u4e00\u4e9b\u5de7\u5999\u7684\u793e\u4f1a\u5de5\u7a0b\u6280\u672f\u76f8\u7ed3\u5408\uff0c\u4e3a\u653b\u51fb\u8005\u5e26\u6765\u4e86\u5f88\u591a\u53ef\u80fd\u6027\u3002",
+	"description": "\u8de8\u7ad9\u70b9\u811a\u672c (XSS) \u662f\u6307\u5ba2\u6237\u7aef\u4ee3\u7801\u6ce8\u5165\u653b\u51fb\uff0c\u5176\u4e2d\uff0c\u653b\u51fb\u8005\u53ef\u4ee5\u5c06\u6076\u610f\u811a\u672c\u6267\u884c\u5230\u5408\u6cd5\u7684\u7f51\u7ad9\u6216 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u3002\u5f53 Web \u5e94\u7528\u7a0b\u5e8f\u5728\u5176\u751f\u6210\u7684\u8f93\u51fa\u4e2d\u4f7f\u7528\u672a\u7ecf\u9a8c\u8bc1\u6216\u672a\u7f16\u7801\u7684\u7528\u6237\u8f93\u5165\u65f6\uff0c\u5c31\u4f1a\u53d1\u751f XSS\u3002",
+	"recommendation": "\u5bf9\u9875\u9762\u4e0a\u5448\u73b0\u7684\u7528\u6237\u8f93\u5165\u5e94\u7528\u4e0a\u4e0b\u6587\u76f8\u5173\u7f16\u7801\u548c/\u6216\u9a8c\u8bc1",
+	"long_description": "\u4e3a\u4e86\u5b9e\u65bd\u8de8\u7ad9\u70b9\u811a\u672c (XSS) \u653b\u51fb\uff0c\u653b\u51fb\u8005\u4e0d\u4f1a\u76f4\u63a5\u9488\u5bf9\u53d7\u5bb3\u8005\u3002\u76f8\u53cd\uff0c\u653b\u51fb\u8005\u4f1a\u5229\u7528\u53d7\u5bb3\u8005\u6240\u8bbf\u95ee\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u7684\u6f0f\u6d1e\uff0c\u901a\u8fc7 Web \u5e94\u7528\u7a0b\u5e8f\u4f20\u9012\u6076\u610f JavaScript\u3002\u7531\u4e8e\u53d7\u5bb3\u8005\u7684\u6d4f\u89c8\u5668\u65e0\u6cd5\u533a\u5206\u6076\u610f JavaScript \u548c\u5408\u6cd5 JavaScript\uff0c\u56e0\u6b64\u4f1a\u6267\u884c\u653b\u51fb\u8005\u7684\u6076\u610f\u8d1f\u8f7d\u3002<br/><br/>\u7531\u4e8e\u8de8\u7ad9\u70b9\u811a\u672c (XSS) \u662f\u7528\u6237\u8f93\u5165\uff0c\u56e0\u6b64\u88ab\u89e3\u91ca\u4e3a\u4ee3\u7801\u3002\u4e3a\u4e86\u9632\u6b62 XSS\uff0c\u5fc5\u987b\u8fdb\u884c\u5b89\u5168\u7684\u8f93\u5165\u5904\u7406\u3002\u5904\u7406\u4e0d\u53d7\u4fe1\u4efb\u7684\u7528\u6237\u8f93\u5165\u7684\u4e24\u79cd\u57fa\u672c\u65b9\u6cd5\u662f<strong>\u7f16\u7801</strong>\u548c<strong>\u9a8c\u8bc1</strong>\u3002<br/><br/> <ul> <li><strong>\u7f16\u7801</strong> - \u8f6c\u4e49\u7528\u6237\u8f93\u5165\uff0c\u4ee5\u4f7f\u6d4f\u89c8\u5668\u5c06\u5176\u89e3\u91ca\u4e3a<strong>\u6570\u636e</strong>\u800c\u4e0d\u662f\u4ee3\u7801</li> <li><strong>\u9a8c\u8bc1</strong> - \u7b5b\u9009\u7528\u6237\u8f93\u5165\uff0c\u4ee5\u4f7f\u6d4f\u89c8\u5668\u5c06\u5176\u89e3\u91ca\u4e3a\u65e0\u6076\u610f\u547d\u4ee4\u7684\u6570\u636e</li> </ul><br/>\u7f16\u7801\u548c\u9a8c\u8bc1\u662f\u4e24\u79cd\u4e0d\u540c\u7684\u8de8\u7ad9\u811a\u672c (XSS) \u9632\u62a4\u65b9\u6cd5\u3002\u786e\u5b9a\u5e94\u4f7f\u7528\u54ea\u79cd\u65b9\u6cd5\u5f88\u5927\u7a0b\u5ea6\u4e0a\u53d6\u51b3\u4e8e\u63d2\u5165\u4e86\u4e0d\u53d7\u4fe1\u4efb\u7528\u6237\u6570\u636e\u7684<strong>\u4e0a\u4e0b\u6587</strong><br/><br/> \u4ee5\u4e0b\u662f\u6700\u5e38\u89c1\u7684\u8de8\u7ad9\u811a\u672c (XSS) \u4e0a\u4e0b\u6587\u7684\u4e24\u4e2a\u793a\u4f8b\u3002<br/> <pre> &lt;!-- HTML \u5143\u7d20 --&gt; &lt;div&gt;<strong><span class=\\\"bb-dark\\\">userInput</span></strong>&lt;/div&gt; &lt;!-- HTML \u5c5e\u6027 --&gt; &lt;input value=&quot;<strong><span class=\\\"bb-dark\\\">userInput</strong></span>&quot;&gt; </pre> \u4e0a\u8ff0\u4e24\u4f8b\u4e2d\u7684\u8de8\u7ad9\u811a\u672c (XSS) \u9632\u62a4\u65b9\u6cd5\u5e76\u4e0d\u76f8\u540c\u3002\u5728\u7b2c\u4e00\u4e2a\u793a\u4f8b\u4e2d\uff0c\u7528\u6237\u8f93\u5165\u88ab\u63d2\u5165\u5230 HTML \u5143\u7d20\u4e2d\uff0c\u56e0\u6b64 HTML \u7f16\u7801\u662f\u6b63\u786e\u7684 XSS \u9632\u62a4\u65b9\u6cd5\u3002\u4f46\u662f\uff0c\u5728\u7b2c\u4e8c\u4e2a\u793a\u4f8b\u4e2d\uff0c\u7528\u6237\u8f93\u5165\u88ab\u63d2\u5165\u5230 HTML \u5c5e\u6027\u4e2d\uff0c\u56e0\u6b64\uff0c\u5408\u9002\u7684\u9632\u62a4\u65b9\u6cd5\u662f\u9a8c\u8bc1\uff08\u5728\u6b64\u4f8b\u4e2d\uff0c\u7b5b\u9009\u51fa <code>'</code> \u548c <code>&quot;</code>\uff09\u3002<br/> <pre> &lt;!-- \u5e94\u7528\u7a0b\u5e8f\u4ee3\u7801 --&gt; &lt;input value=&quot;<strong><span class=\\\"bb-dark\\\">userInput</span></strong>&quot;&gt; &lt;!-- \u6076\u610f\u5b57\u7b26\u4e32 --&gt; &quot;&gt;&lt;script&gt;...&lt;/script&gt;&lt;input value=&quot; &lt;!-- \u7ed3\u679c\u4ee3\u7801 --&gt; &lt;input value=&quot;<strong><span class=\\\"bb-dark\\\">&quot;&gt;&lt;script&gt;...&lt;/script&gt;&lt;input value=&quot;</strong></span>&quot;&gt; </pre>\u5728<strong>\u5927\u591a\u6570</strong>\u60c5\u51b5\u4e0b\uff0c\u6bcf\u5f53\u9875\u9762\u4e2d\u5305\u542b\u7528\u6237\u8f93\u5165\u65f6\u90fd\u5e94\u6267\u884c\u7f16\u7801\uff0c\u4f46\u662f\uff0c\u5982\u4e0a\u8ff0\u793a\u4f8b\u6240\u8ff0\uff0c\u5728\u67d0\u4e9b\u60c5\u51b5\u4e0b\uff0c\u7f16\u7801\u5fc5\u987b\u7528\u9a8c\u8bc1\u4ee3\u66ff\u6216\u7528\u9a8c\u8bc1\u52a0\u4ee5\u8865\u5145\u3002<br/><br/>\u52a1\u5fc5\u8981\u6ce8\u610f\uff0c\u5b89\u5168\u8f93\u5165\u5904\u7406\u5fc5\u987b\u8003\u8651\u7528\u6237\u8f93\u5165\u6240\u63d2\u5165\u9875\u9762\u7684\u4e0a\u4e0b\u6587\u3002",
+	"tags": ["xss", "CWE-79"],
+	"cvss2": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+	"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+	"cvss_score": 5.3,
+	"refs": [{
+		"name": "Cross-site Scripting (XSS) Attack - Acunetix",
+		"url": "https://www.acunetix.com/websitesecurity/cross-site-scripting/"
+	}, {
+		"name": "Types of XSS - Acunetix",
+		"url": "https://www.acunetix.com/websitesecurity/xss/"
+	}, {
+		"name": "XSS Filter Evasion Cheat Sheet",
+		"url": "https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet"
+	}, {
+		"name": "Excess XSS, a comprehensive tutorial on cross-site scripting",
+		"url": "https://excess-xss.com/"
+	}, {
+		"name": "Cross site scripting",
+		"url": "https://en.wikipedia.org/wiki/Cross-site_scripting "
+	}],
+	"created": 1517160703,
+	"updated": 1647449009,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "xss"
+} {
+	"vt_id": "760d5a01-dc58-fcbe-6c21-4f04c64a2467",
+	"app_id": "application_error.xml",
+	"name": "\u5e94\u7528\u7a0b\u5e8f\u9519\u8bef\u6d88\u606f",
+	"severity": 2,
+	"details_template": "\u5e94\u7528\u7a0b\u5e8f\u9519\u8bef\u6d88\u606f\uff1a<br/><ul>{{#.}}<li>{{url}} <br/><strong>{{match}}</strong></li><br/>{{/.}}</ul>",
+	"impact": "\u9519\u8bef\u6d88\u606f\u53ef\u80fd\u4f1a\u6cc4\u9732\u53ef\u7528\u4e8e\u5b9e\u65bd\u8fdb\u4e00\u6b65\u653b\u51fb\u7684\u654f\u611f\u4fe1\u606f\u3002",
+	"description": "<div class=\\\"bb-coolbox\\\"><span class=\\\"bb-dark\\\">\u6b64\u8b66\u62a5\u9700\u8981\u624b\u52a8\u786e\u8ba4</span></div><br/>Acunetix \u53d1\u73b0\u4e86\u4e00\u4e2a\u6216\u591a\u4e2a\u9519\u8bef/\u8b66\u544a\u6d88\u606f\u3002\u5e94\u7528\u7a0b\u5e8f\u9519\u8bef\u6216\u8b66\u544a\u6d88\u606f\u53ef\u80fd\u4f1a\u5c06\u6709\u5173\u5e94\u7528\u7a0b\u5e8f\u5185\u90e8\u5de5\u4f5c\u7684\u654f\u611f\u4fe1\u606f\u6cc4\u9732\u7ed9\u653b\u51fb\u8005\u3002<br/>\u8fd9\u4e9b\u6d88\u606f\u8fd8\u53ef\u80fd\u5305\u542b\u4ea7\u751f\u4e86\u672a\u5904\u7406\u5f02\u5e38\u7684\u6587\u4ef6\u7684\u4f4d\u7f6e\u3002<br/>\u8bf7\u67e5\u9605\u201c\u653b\u51fb\u8be6\u60c5\u201d\u90e8\u5206\uff0c\u4ee5\u83b7\u53d6\u6709\u5173\u53d7\u5f71\u54cd\u9875\u9762\u7684\u66f4\u591a\u4fe1\u606f\u3002",
+	"recommendation": "\u9a8c\u8bc1\u8fd9\u4e9b\u9875\u9762\u662f\u5426\u62ab\u9732\u9519\u8bef\u6216\u8b66\u544a\u6d88\u606f\uff0c\u5e76\u9002\u5f53\u914d\u7f6e\u5e94\u7528\u7a0b\u5e8f\u4ee5\u5c06\u9519\u8bef\u8bb0\u5f55\u5230\u6587\u4ef6\uff0c\u800c\u4e0d\u662f\u5c06\u9519\u8bef\u663e\u793a\u7ed9\u7528\u6237\u3002",
+	"long_description": "\u5c3d\u7ba1\u4fe1\u606f\u62ab\u9732\u6f0f\u6d1e\u4e0d\u80fd\u88ab\u653b\u51fb\u8005\u76f4\u63a5\u5229\u7528\uff0c\u4f46\u5b83\u4eec\u53ef\u4ee5\u5e2e\u52a9\u653b\u51fb\u8005\u4e86\u89e3\u7279\u5b9a\u4e8e\u7cfb\u7edf\u7684\u4fe1\u606f\u3002\u4ee5\u4e0b\u662f\u653b\u51fb\u8005\u53ef\u80fd\u4ece\u5e94\u7528\u7a0b\u5e8f\u9519\u8bef\u62ab\u9732\u83b7\u53d6\u7684<strong>\u90e8\u5206</strong>\u4fe1\u606f\u5217\u8868\u3002<br/> <ul> <li>\u5185\u90e8 IP \u5730\u5740</li> <li>\u673a\u5bc6\uff08\u5bc6\u7801\u3001\u5bc6\u94a5\u3001\u4ee4\u724c...\uff09</li> <li>\u64cd\u4f5c\u7cfb\u7edf\u7248\u672c</li> <li>\u8f6f\u4ef6\u7248\u672c\u53f7</li> <li>\u7f3a\u5931\u7684\u5b89\u5168\u8865\u4e01</li> <li>\u5e94\u7528\u7a0b\u5e8f\u5806\u6808\u8ddf\u8e2a</li> <li>SQL \u8bed\u53e5</li> <li>\u654f\u611f\u6587\u4ef6\uff08\u5907\u4efd\u3001\u4e34\u65f6\u6587\u4ef6...\uff09\u7684\u4f4d\u7f6e</li> <li>\u654f\u611f\u8d44\u6e90\uff08\u6570\u636e\u5e93\u3001\u7f13\u5b58\u3001\u4ee3\u7801\u5b58\u50a8\u5e93...\uff09\u7684\u4f4d\u7f6e</li> <ul>",
+	"tags": ["information_disclosure", "error_handling", "CWE-209"],
+	"cvss2": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+	"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+	"cvss_score": 5.3,
+	"refs": [{
+		"name": "PHP Runtime Configuration",
+		"url": "https://www.php.net/manual/en/errorfunc.configuration.php#ini.display-errors"
+	}, {
+		"name": "Improper Error Handling",
+		"url": "https://www.owasp.org/index.php/Improper_Error_Handling"
+	}],
+	"created": 1517160703,
+	"updated": 1647449009,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "informationdisclosure"
+} {
+	"vt_id": "bca221d1-8581-3375-4097-66b0048ed088",
+	"app_id": "no_https.xml",
+	"name": "\u672a\u52a0\u5bc6\u7684\u8fde\u63a5",
+	"severity": 2,
+	"details_template": "",
+	"impact": "\u53ef\u80fd\u51fa\u73b0\u4fe1\u606f\u62ab\u9732\u3002",
+	"description": "\u6b64\u626b\u63cf\u76ee\u6807\u901a\u8fc7\u672a\u52a0\u5bc6\u7684\u8fde\u63a5\u8fdb\u884c\u8fde\u63a5\u3002\u6f5c\u5728\u653b\u51fb\u8005\u53ef\u4ee5\u62e6\u622a\u5e76\u4fee\u6539\u5f80\u8fd4\u6b64\u7ad9\u70b9\u7684\u6570\u636e\u3002",
+	"recommendation": "\u6b64\u7ad9\u70b9\u5e94\u901a\u8fc7\u5b89\u5168\u7684 (HTTPS) \u8fde\u63a5\u53d1\u9001\u548c\u63a5\u6536\u6570\u636e\u3002",
+	"long_description": "",
+	"tags": ["weak_crypto", "CWE-319"],
+	"cvss2": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+	"cvss_score": 5.4,
+	"refs": [],
+	"created": 1554108832,
+	"updated": 1596442291,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "weakcrypto"
+} {
+	"vt_id": "fd1ec03e-319d-ae3b-425f-d8c1275619d8",
+	"app_id": "cookie_misconfiguration.xml",
+	"name": "Cookie \u5177\u6709\u7f3a\u5931\u3001\u4e0d\u4e00\u81f4\u6216\u77db\u76fe\u5c5e\u6027",
+	"severity": 1,
+	"details_template": "\u5177\u6709\u7f3a\u5931\u3001\u4e0d\u4e00\u81f4\u6216\u77db\u76fe\u5c5e\u6027\u7684 Cookie \u5217\u8868\uff1a<br/><ul>{{#.}}<li>{{url}} <br/><br/>\u8bbe\u7f6e\u4ee5\u4e0b\u5c5e\u6027\u7684 Cookie\uff1a<pre>{{headerSetCookie}}</pre><br/>\u6b64 Cookie \u5177\u6709\u4ee5\u4e0b\u95ee\u9898\uff1a<br/><pre>{{nicelyFormattedOutput}}</pre><br/></li>{{/.}}</ul>",
+	"impact": "Cookies \u4e0d\u4f1a\u901a\u8fc7 Web \u6d4f\u89c8\u5668\u5b58\u50a8\u6216\u63d0\u4ea4\u3002",
+	"description": "cookie \u7684\u81f3\u5c11\u4e00\u4e2a\u5c5e\u6027\u4f1a\u5bfc\u81f4\u6b64 cookie \u65e0\u6548\u6216\u4e0e\u6b64 cookie \u7684\u5176\u4ed6\u5c5e\u6027\u6216\u6b64 cookie \u7684\u4f7f\u7528\u73af\u5883\u4e0d\u517c\u5bb9\u3002\u5c3d\u7ba1\u8fd9\u672c\u8eab\u4e0d\u662f\u4e00\u4e2a\u6f0f\u6d1e\uff0c\u4f46\u5b83\u53ef\u80fd\u4f1a\u5bfc\u81f4\u5e94\u7528\u7a0b\u5e8f\u51fa\u73b0\u610f\u5916\u884c\u4e3a\uff0c\u4ece\u800c\u5bfc\u81f4\u6b21\u8981\u7684\u5b89\u5168\u95ee\u9898\u3002",
+	"recommendation": "\u786e\u4fdd cookie \u914d\u7f6e\u7b26\u5408\u9002\u7528\u6807\u51c6\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-284"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "MDN | Set-Cookie",
+		"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
+	}, {
+		"name": "Securing cookies with cookie prefixes",
+		"url": "https://www.sjoerdlangkemper.nl/2017/02/09/cookie-prefixes/"
+	}, {
+		"name": "Cookies: HTTP State Management Mechanism",
+		"url": "https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05"
+	}, {
+		"name": "SameSite Updates - The Chromium Projects",
+		"url": "https://www.chromium.org/updates/same-site"
+	}, {
+		"name": "draft-west-first-party-cookies-07: Same-site Cookies",
+		"url": "https://tools.ietf.org/html/draft-west-first-party-cookies-07"
+	}],
+	"created": 1589624307,
+	"updated": 1603879871,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+} {
+	"vt_id": "04b4867e-5297-23ff-c810-97acf15ed71a",
+	"app_id": "crawler_cookie_without_httponly.xml",
+	"name": "Cookie \u672a\u8bbe\u7f6e HttpOnly \u6807\u8bb0",
+	"severity": 1,
+	"details_template": "Cookie \u672a\u8bbe\u7f6e HttpOnly \u6807\u8bb0\uff1a<br/><ul>{{#.}}<li>{{url}} <br/><br/><pre>{{match}}</pre><br/></li>{{/.}}</ul>",
+	"impact": "Cookie \u53ef\u901a\u8fc7\u5ba2\u6237\u7aef\u811a\u672c\u8bbf\u95ee\u3002",
+	"description": "\u4e00\u4e2a\u6216\u591a\u4e2a cookie \u6ca1\u6709\u8bbe\u7f6e HttpOnly \u6807\u5fd7\u3002\u5f53 cookie \u8bbe\u7f6e\u6709 HttpOnly \u6807\u5fd7\u65f6\uff0c\u5b83\u4f1a\u547d\u4ee4\u6d4f\u89c8\u5668\u8be5 cookie \u53ea\u80fd\u7531\u670d\u52a1\u5668\u8bbf\u95ee\uff0c\u800c\u4e0d\u80fd\u7531\u5ba2\u6237\u7aef\u811a\u672c\u8bbf\u95ee\u3002\u8fd9\u662f\u5bf9\u4f1a\u8bdd cookie \u7684\u91cd\u8981\u5b89\u5168\u9632\u62a4\u3002",
+	"recommendation": "\u5982\u6709\u53ef\u80fd\uff0c\u60a8\u5e94\u4e3a\u8fd9\u4e9b Cookie \u8bbe\u7f6e HttpOnly \u6807\u5fd7\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-1004"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [],
+	"created": 1517241414,
+	"updated": 1596442291,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+} {
+	"vt_id": "cce9a019-1bcb-333f-f560-b55d5bb28f3c",
+	"app_id": "trace_method_enabled.xml",
+	"name": "TRACE \u65b9\u6cd5\u5df2\u542f\u7528",
+	"severity": 1,
+	"details_template": "",
+	"impact": "\u653b\u51fb\u8005\u53ef\u80fd\u6ee5\u7528 HTTP TRACE \u529f\u80fd\u6765\u8bbf\u95ee HTTP \u62a5\u5934\u4e2d\u7684\u4fe1\u606f\uff0c\u4f8b\u5982 Cookie\u548c\u8eab\u4efd\u9a8c\u8bc1\u6570\u636e\u3002",
+	"description": "\u6b64 Web \u670d\u52a1\u5668\u4e0a\u542f\u7528\u4e86 HTTP TRACE \u65b9\u6cd5\u3002\u5982\u679c Web \u6d4f\u89c8\u5668\u4e2d\u5b58\u5728\u5176\u4ed6\u8de8\u57df\u6f0f\u6d1e\uff0c\u5219\u53ef\u4ee5\u4ece\u4efb\u4f55\u652f\u6301 HTTP TRACE \u65b9\u6cd5\u7684\u57df\u4e2d\u8bfb\u53d6\u654f\u611f\u7684\u62a5\u5934\u4fe1\u606f\u3002",
+	"recommendation": "\u5728 Web \u670d\u52a1\u5668\u4e0a\u7981\u7528 TRACE \u65b9\u6cd5\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-489"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "W3C - RFC 2616",
+		"url": "http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html"
+	}, {
+		"name": "US-CERT VU#867593",
+		"url": "https://www.kb.cert.org/vuls/id/867593/"
+	}, {
+		"name": "Cross-site tracing (XST)",
+		"url": "https://www.cgisecurity.com/lib/WH-WhitePaper_XST_ebook.pdf"
+	}],
+	"created": 1517160703,
+	"updated": 1626868555,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+} {
+	"vt_id": "b8e2c082-44f1-cf0b-0b8e-0e0bb357e798",
+	"app_id": "clickjacking_x_frame_options.xml",
+	"name": "\u70b9\u51fb\u52ab\u6301\uff1aX-Frame-Options \u62a5\u5934\u7f3a\u5931",
+	"severity": 1,
+	"details_template": "\u4e0d\u5305\u542b XFO \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul>{{#.}}<li>{{url}}</li><br/>{{/.}}</ul>",
+	"impact": "\u5f71\u54cd\u53d6\u51b3\u4e8e\u53d7\u5f71\u54cd\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u3002",
+	"description": "\u70b9\u51fb\u52ab\u6301\uff08\u7528\u6237\u754c\u9762\u77eb\u6b63\u653b\u51fb\u3001UI \u77eb\u6b63\u653b\u51fb\u3001UI \u77eb\u6b63\uff09\u662f\u4e00\u79cd\u6076\u610f\u6280\u672f\uff0c\u8bf1\u4f7f Web \u7528\u6237\u70b9\u51fb\u4e0e\u7528\u6237\u8ba4\u4e3a\u5176\u5355\u51fb\u7684\u5185\u5bb9\u4e0d\u540c\u7684\u5185\u5bb9\uff0c\u4ece\u800c\u5728\u5355\u51fb\u770b\u4f3c\u65e0\u5bb3\u7684\u7f51\u9875\u65f6\u6709\u53ef\u80fd\u5bfc\u81f4\u673a\u5bc6\u4fe1\u606f\u6cc4\u9732\u6216\u8ba1\u7b97\u673a\u88ab\u63a7\u5236 \u3002<br/><br/>\u670d\u52a1\u5668\u672a\u8fd4\u56de </strong>X-Frame-Options<strong> \u62a5\u5934\uff0c\u8fd9\u610f\u5473\u7740\u6b64\u7f51\u7ad9\u5b58\u5728\u906d\u53d7\u70b9\u51fb\u52ab\u6301\u653b\u51fb\u7684\u98ce\u9669\u3002X-Frame-Options HTTP \u54cd\u5e94\u62a5\u5934\u53ef\u88ab\u7528\u4e8e\u6307\u793a\u662f\u5426\u5e94\u5141\u8bb8\u6d4f\u89c8\u5668\u5728\u6846\u67b6\u6216 iframe \u5185\u5448\u73b0\u9875\u9762\u3002\u7ad9\u70b9\u53ef\u4ee5\u901a\u8fc7\u786e\u4fdd\u5176\u5185\u5bb9\u4e2d\u672a\u5d4c\u5165\u5176\u4ed6\u7f51\u7ad9\u6765\u907f\u514d\u70b9\u51fb\u52ab\u6301\u653b\u51fb\u3002",
+	"recommendation": "\u914d\u7f6e\u60a8\u7684 Web \u670d\u52a1\u5668\uff0c\u4f7f\u5176\u5305\u542b X-Frame-Options \u62a5\u5934\u548c\u5e26\u6709 frame-ancestors \u6307\u4ee4\u7684 CSP \u62a5\u5934\u3002\u6709\u5173\u8be5\u62a5\u5934\u53ef\u80fd\u503c\u7684\u66f4\u591a\u4fe1\u606f\uff0c\u8bf7\u67e5\u9605 Web \u53c2\u8003\u8d44\u6599\u3002",
+	"long_description": "",
+	"tags": ["abuse_of_functionality", "CWE-1021"],
+	"cvss2": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N",
+	"cvss_score": 5.8,
+	"refs": [{
+		"name": "The X-Frame-Options response header",
+		"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
+	}, {
+		"name": "Clickjacking",
+		"url": "https://en.wikipedia.org/wiki/Clickjacking"
+	}, {
+		"name": "OWASP Clickjacking",
+		"url": "https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html"
+	}, {
+		"name": "Frame Buster Buster",
+		"url": "https://stackoverflow.com/questions/958997/frame-buster-buster-buster-code-needed"
+	}],
+	"created": 1608725686,
+	"updated": 1624464437,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "abuseoffunctionality"
+} {
+	"vt_id": "a27a2f93-e096-4488-207e-76cb918e2613",
+	"app_id": "php_version_disclosure.xml",
+	"name": "PHP \u7248\u672c\u6cc4\u9732",
+	"severity": 0,
+	"details_template": "\u68c0\u6d4b\u7684\u7248\u672c\uff1a<strong>{{version}}</strong>\u3002",
+	"impact": "\u653b\u51fb\u8005\u53ef\u4ee5\u4f7f\u7528\u62ab\u9732\u7684\u4fe1\u606f\u83b7\u53d6\u6240\u786e\u8ba4\u7248\u672c\u7684\u7279\u5b9a\u5b89\u5168\u6f0f\u6d1e\u3002",
+	"description": "Web \u670d\u52a1\u5668\u6b63\u5728\u53d1\u9001 X-Powered-By\uff1a\u54cd\u5e94\u62a5\u5934\uff0c\u663e\u793a PHP \u7248\u672c\u3002",
+	"recommendation": "\u914d\u7f6e Web \u670d\u52a1\u5668\u4ee5\u9632\u6b62\u5176 HTTP \u54cd\u5e94\u7684\u4fe1\u606f\u6cc4\u9732\u3002",
+	"long_description": "",
+	"tags": [],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "PHP Documentation: header_remove()",
+		"url": "https://www.php.net/manual/en/function.header-remove.php"
+	}, {
+		"name": "PHP Documentation: php.ini directive expose_php",
+		"url": "https://www.php.net/manual/en/ini.core.php#ini.expose-php"
+	}],
+	"created": 1517160703,
+	"updated": 1626868555,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": ""
+} {
+	"vt_id": "3439ad21-f264-1013-01ff-ca1c446333b0",
+	"app_id": "possible_server_path_disclosure_(windows).xml",
+	"name": "\u53ef\u80fd\u51fa\u73b0\u670d\u52a1\u5668\u8def\u5f84\u62ab\u9732 (Windows)",
+	"severity": 0,
+	"details_template": "\u5305\u542b\u6b63\u5728\u62ab\u9732\u7684\u8def\u5f84\u7684\u9875\u9762\uff1a<br/><ul>{{#.}}<li>{{url}} <br/><strong>{{match}}</strong></li>{{/.}}</ul>",
+	"impact": "\u53ef\u80fd\u51fa\u73b0\u654f\u611f\u4fe1\u606f\u62ab\u9732\u3002",
+	"description": "\u53d1\u73b0\u4e86\u4e00\u4e2a\u6216\u591a\u4e2a\u5b8c\u5168\u9650\u5b9a\u7684\u8def\u5f84\u540d\u79f0\u3002\u653b\u51fb\u8005\u53ef\u80fd\u4ece\u6b64\u4fe1\u606f\u4e2d\u83b7\u53d6 Web \u670d\u52a1\u5668\u7684\u7cfb\u7edf\u7ed3\u6784\u3002\u6b64\u4fe1\u606f\u8fd8\u53ef\u7528\u4e8e\u8fdb\u884c\u8fdb\u4e00\u6b65\u653b\u51fb\u3002<br/><br/><div class=\\\"bb-coolbox\\\"><span class=\\\"bb-dark\\\">\u6b64\u8b66\u62a5\u53ef\u80fd\u662f\u8bef\u62a5\uff0c\u9700\u8981\u624b\u52a8\u786e\u8ba4\u3002</span></div>",
+	"recommendation": "\u963b\u6b62\u5411\u7528\u6237\u663e\u793a\u6b64\u4fe1\u606f\u3002",
+	"long_description": "",
+	"tags": ["information_disclosure", "CWE-200"],
+	"cvss2": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+	"cvss_score": 5.3,
+	"refs": [{
+		"name": "Full Path Disclosure",
+		"url": "https://www.owasp.org/index.php/Full_Path_Disclosure"
+	}],
+	"created": 0,
+	"updated": 0,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "informationdisclosure"
+} {
+	"vt_id": "3f6a8a0e-07f2-af81-54ff-61020299caeb",
+	"app_id": "no_http_redirection.xml",
+	"name": "\u65e0 HTTP \u91cd\u5b9a\u5411",
+	"severity": 0,
+	"details_template": "",
+	"impact": "\u5728\u67d0\u4e9b\u60c5\u51b5\u4e0b\uff0c\u5176\u53ef\u7528\u4e8e\u4e2d\u95f4\u4eba (MitM) \u653b\u51fb",
+	"description": "\u68c0\u6d4b\u5230\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4f7f\u7528 HTTP \u534f\u8bae\uff0c\u4f46\u672a\u81ea\u52a8\u5c06\u7528\u6237\u91cd\u5b9a\u5411\u5230 HTTPS\u3002",
+	"recommendation": "\u5efa\u8bae\u5728\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u5b9e\u65bd HTTP \u91cd\u5b9a\u5411\u6700\u4f73\u5b9e\u8df5\u3002\u8bf7\u67e5\u8be2\u7f51\u7edc\u53c2\u8003\u6587\u4ef6\u4ee5\u4e86\u89e3\u66f4\u591a\u4fe1\u606f",
+	"long_description": "",
+	"tags": ["CWE-16"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "HTTP Redirections",
+		"url": "https://infosec.mozilla.org/guidelines/web_security#http-redirections"
+	}],
+	"created": 1600900764,
+	"updated": 1601991852,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": ""
+} {
+	"vt_id": "011055fc-94f1-ab96-56ac-53117c56fb4d",
+	"app_id": "csp_not_implemented.xml",
+	"name": "\u672a\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)",
+	"severity": 0,
+	"details_template": "\u4e0d\u5305\u542b CSP \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul>{{#.}}<li>{{url}}</li><br/>{{/.}}</ul>",
+	"impact": "CSP \u53ef\u7528\u4e8e\u9884\u9632\u548c/\u6216\u7f13\u89e3\u6d89\u53ca\u5185\u5bb9/\u4ee3\u7801\u6ce8\u5165\u7684\u653b\u51fb\uff0c\u4f8b\u5982\u8de8\u7ad9\u811a\u672c/XSS \u653b\u51fb\u3001\u9700\u8981\u5d4c\u5165\u6076\u610f\u8d44\u6e90\u7684\u653b\u51fb\u3001\u6d89\u53ca\u6076\u610f\u4f7f\u7528 iframe \u7684\u653b\u51fb\uff08\u4f8b\u5982\u70b9\u51fb\u52ab\u6301\u653b\u51fb\uff09\u7b49\u3002",
+	"description": "\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP) \u589e\u52a0\u4e86\u989d\u5916\u7684\u5b89\u5168\u5c42\uff0c\u6709\u52a9\u4e8e\u68c0\u6d4b\u548c\u7f13\u89e3\u67d0\u4e9b\u7c7b\u578b\u7684\u653b\u51fb\uff0c\u5305\u62ec\u8de8\u7ad9\u811a\u672c (XSS) \u548c\u6570\u636e\u6ce8\u5165\u653b\u51fb\u3002<br/><br/>\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP) \u53ef\u901a\u8fc7\u6dfb\u52a0 <strong>Content-Security-Policy</strong> \u62a5\u5934\u5b9e\u65bd\u3002\u6b64\u62a5\u5934\u7684\u503c\u662f\u4e00\u4e2a\u5b57\u7b26\u4e32\uff0c\u5176\u4e2d\u5305\u542b\u63cf\u8ff0\u5185\u5bb9\u5b89\u5168\u7b56\u7565\u7684\u7b56\u7565\u6307\u4ee4\u3002\u8981\u5b9e\u65bd CSP\uff0c\u60a8\u5e94\u8be5\u4e3a\u7ad9\u70b9\u4f7f\u7528\u7684\u6240\u6709\u8d44\u6e90\u7c7b\u578b\u5b9a\u4e49\u5141\u8bb8\u7684\u6765\u6e90\u5217\u8868\u3002\u4f8b\u5982\uff0c\u5982\u679c\u60a8\u6709\u4e00\u4e2a\u7b80\u5355\u7684\u7ad9\u70b9\uff0c\u9700\u8981\u4ece CDN \u52a0\u8f7d\u672c\u5730\u6258\u7ba1\u548c jQuery \u5e93\u4e2d\u7684\u811a\u672c\u3001\u6837\u5f0f\u8868\u548c\u56fe\u50cf\uff0c\u5219 CSP \u62a5\u5934\u53ef\u80fd\u5982\u4e0b\u6240\u793a\uff1a<pre><code> Content-Security-Policy: default-src 'self'; script-src 'self' https://code.jquery.com; </code></pre> <br/><br/>\u68c0\u6d4b\u5230\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u672a\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)\uff0c\u56e0\u4e3a\u54cd\u5e94\u4e2d\u7f3a\u5c11 CSP \u62a5\u5934\u3002\u5efa\u8bae\u5728\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)\u3002",
+	"recommendation": "\u5efa\u8bae\u5728\u60a8\u7684 Web \u5e94\u7528\u7a0b\u5e8f\u4e2d\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)\u3002\u914d\u7f6e\u5185\u5bb9\u5b89\u5168\u7b56\u7565\u6d89\u53ca\u6dfb\u52a0 <strong>Content-Security-Policy</strong> HTTP \u62a5\u5934\u5230 Web \u9875\u9762\u5e76\u4e3a\u5176\u8d4b\u503c\uff0c\u4ee5\u63a7\u5236\u5141\u8bb8\u7528\u6237\u4ee3\u7406\u4e3a\u8be5\u9875\u9762\u52a0\u8f7d\u7684\u8d44\u6e90\u3002",
+	"long_description": "",
+	"tags": ["configuration", "CWE-1021"],
+	"cvss2": "AV:N/AC:L/Au:N/C:N/I:N/A:N",
+	"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:N",
+	"cvss_score": 0.0,
+	"refs": [{
+		"name": "Content Security Policy (CSP)",
+		"url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"
+	}, {
+		"name": "Implementing Content Security Policy",
+		"url": "https://hacks.mozilla.org/2016/02/implementing-content-security-policy/"
+	}],
+	"created": 1537256546,
+	"updated": 1636020173,
+	"app": "wvs",
+	"vuln_count": 1,
+	"type": "configuration"
+} {
+	"loc_id": 2,
+	"scan_session_id": "f50c71ab-2311-426f-8a09-377a33319cfd",
+	"name": "http://192.168.0.177/",
+	"parent_id": null,
+	"source_id": 2,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/",
+	"loc_type": "folder",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 3,
+		"method": "GET",
+		"groups": [{
+			"type": "Path Fragment",
+			"input_names": ["/pikachu-master/vul/rce/[*].php"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/"
+} {
+	"loc_id": 6,
+	"scan_session_id": "f50c71ab-2311-426f-8a09-377a33319cfd",
+	"name": "pikachu-master",
+	"parent_id": 2,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/pikachu-master/",
+	"loc_type": "folder",
+	"input_data": null,
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/"
+} {
+	"loc_id": 7,
+	"scan_session_id": "f50c71ab-2311-426f-8a09-377a33319cfd",
+	"name": "vul",
+	"parent_id": 6,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": null,
+	"fragments": null,
+	"path": "/pikachu-master/vul/",
+	"loc_type": "folder",
+	"input_data": null,
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/"
+} {
+	"loc_id": 8,
+	"scan_session_id": "f50c71ab-2311-426f-8a09-377a33319cfd",
+	"name": "rce",
+	"parent_id": 7,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": ["static", "stable404", "found"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/rce/",
+	"loc_type": "folder",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/rce/"
+} {
+	"loc_id": 34,
+	"scan_session_id": "f50c71ab-2311-426f-8a09-377a33319cfd",
+	"name": "rce.php",
+	"parent_id": 8,
+	"source_id": 11,
+	"root_id": 2,
+	"tags": ["_linked"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/rce/rce.php",
+	"loc_type": "file",
+	"input_data": [{
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/rce/rce.php"
+} {
+	"loc_id": 37,
+	"scan_session_id": "f50c71ab-2311-426f-8a09-377a33319cfd",
+	"name": "rce_eval.php",
+	"parent_id": 8,
+	"source_id": 11,
+	"root_id": 2,
+	"tags": ["_linked"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/rce/rce_eval.php",
+	"loc_type": "file",
+	"input_data": [{
+		"variations": 1,
+		"method": "POST",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 2,
+		"method": "POST",
+		"contentType": "multipart/form-data",
+		"groups": [{
+			"type": "POST (multipart)",
+			"input_names": ["txt"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "POST",
+		"contentType": "application/x-www-form-urlencoded",
+		"groups": [{
+			"type": "URL encoded POST",
+			"input_names": ["submit", "txt"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php"
+} {
+	"loc_id": 9,
+	"scan_session_id": "f50c71ab-2311-426f-8a09-377a33319cfd",
+	"name": "rce_ping.php",
+	"parent_id": 8,
+	"source_id": 1,
+	"root_id": 2,
+	"tags": ["_linked"],
+	"fragments": null,
+	"path": "/pikachu-master/vul/rce/rce_ping.php",
+	"loc_type": "file",
+	"input_data": [{
+		"variations": 1,
+		"method": "POST",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 2,
+		"method": "POST",
+		"contentType": "multipart/form-data",
+		"groups": [{
+			"type": "POST (multipart)",
+			"input_names": ["ipaddress"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "GET",
+		"groups": [{
+			"type": "HTTP Header",
+			"input_names": ["Referer", "User-Agent", "X-Forwarded-For"]
+		}]
+	}, {
+		"variations": 1,
+		"method": "POST",
+		"contentType": "application/x-www-form-urlencoded",
+		"groups": [{
+			"type": "URL encoded POST",
+			"input_names": ["ipaddress", "submit"]
+		}]
+	}],
+	"root_url": "http://192.168.0.177/",
+	"url": "http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php"
+} {
+	"loc_url": "http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php",
+	"vt_id": "49cbbd86-c0fc-270b-d5d0-abc476265ef6",
+	"vuln_hash": "ab8c6aed-f953-6e5c-abd4-692cc5ddf765",
+	"request": "POST /pikachu-master/vul/rce/rce_ping.php HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nCookie: PHPSESSID=8mdg0pmbv5up5fhlf86mnbkt87\r\nContent-Length: 86\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\nipaddress=/../../../../../../../../../../../windows/system32/BITSADMIN.exe&submit=ping",
+	"source": "/Scripts/PerScheme/Cmd_Hijack_Windows.script",
+	"loc_id": 9,
+	"details": "URL encoded POST \u8f93\u5165 <strong><span class=\\\"bb-dark\\\">ipaddress</span></strong> \u5df2\u8bbe\u7f6e\u4e3a <strong><span class=\\\"bb-dark\\\">/../../../../../../../../../../../windows/system32/BITSADMIN.exe</span></strong><br/><br/>\u53ef\u80fd\u51fa\u73b0\u7684\u6267\u884c\u7ed3\u679c\uff1a<pre><span class=\\\"bb-blue\\\">USAGE: BITSADMIN [/RAWRETURN] [/WRAP | /NOWRAP] command</span></pre> ",
+	"app_id": "cmd_hijack_windows.xml",
+	"loc_detail": "ipaddress",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "/../../../../../../../../../../../windows/system32/BITSADMIN.exe",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:38.889089+08:00",
+	"status": "open",
+	"tags": ["confidence.90"],
+	"url": "http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php",
+	"name": "Cmd \u52ab\u6301\u6f0f\u6d1e",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php",
+	"vt_id": "38507657-34e5-f283-ca2b-e9ecedd5a530",
+	"vuln_hash": "566a3c73-8d71-72e0-2420-97d9e7265780",
+	"request": "POST /pikachu-master/vul/rce/rce_eval.php HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nCookie: PHPSESSID=8mdg0pmbv5up5fhlf86mnbkt87\r\nContent-Length: 81\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\nsubmit=%E6%8F%90%E4%BA%A4&txt=;assert(base64_decode('cHJpbnQobWQ1KDMxMzM3KSk7'));",
+	"source": "/Scripts/PerScheme/PHP_Code_Injection.script",
+	"loc_id": 37,
+	"details": "URL encoded POST \u8f93\u5165 <strong><span class=\\\"bb-dark\\\">txt</span></strong> \u5df2\u8bbe\u7f6e\u4e3a <strong><span class=\\\"bb-dark\\\">;assert(base64_decode(&#x27;cHJpbnQobWQ1KDMxMzM3KSk7&#x27;));</span></strong><br/><br/> \u53ef\u80fd\u51fa\u73b0\u7684\u6267\u884c\u7ed3\u679c\uff1a<pre><span class=\\\"bb-blue\\\">6f3249aa304055d63828af3bfab778f6</span></pre>  ",
+	"app_id": "php_code_injection.xml",
+	"loc_detail": "txt",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": ";assert(base64_decode('cHJpbnQobWQ1KDMxMzM3KSk7'));",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:46.195171+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php",
+	"name": "PHP \u4ee3\u7801\u6ce8\u5165",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php",
+	"vt_id": "2648b2a5-e4dc-ca70-cbb5-b7513459c75a",
+	"vuln_hash": "e5dbbb9f-5a9d-6cb5-0f5d-429376d3253a",
+	"request": "POST /pikachu-master/vul/rce/rce_ping.php HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nCookie: PHPSESSID=8mdg0pmbv5up5fhlf86mnbkt87\r\nContent-Length: 204\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\nipaddress=%26echo%20qlyrsj%24()%5C%20wohsci%5Cnz%5Exyu%7C%7Ca%20%23'%20%26echo%20qlyrsj%24()%5C%20wohsci%5Cnz%5Exyu%7C%7Ca%20%23%7C\"%20%26echo%20qlyrsj%24()%5C%20wohsci%5Cnz%5Exyu%7C%7Ca%20%23&submit=ping",
+	"source": "/Scripts/PerScheme/Code_Execution.script",
+	"loc_id": 9,
+	"details": "URL encoded POST \u8f93\u5165 <strong><span class=\\\"bb-dark\\\">ipaddress</span></strong> \u5df2\u8bbe\u7f6e\u4e3a <strong><span class=\\\"bb-dark\\\">&amp;echo qlyrsj$()\\ wohsci\\nz^xyu||a #&#x27; &amp;echo qlyrsj$()\\ wohsci\\nz^xyu||a #|&quot; &amp;echo qlyrsj$()\\ wohsci\\nz^xyu||a #</span></strong><br/><br/>  \u53ef\u80fd\u51fa\u73b0\u7684\u6267\u884c\u7ed3\u679c\uff1a<pre><span class=\\\"bb-blue\\\">qlyrsj$()\\ wohsci\\nzxyu</span></pre>  ",
+	"app_id": "code_execution.xml",
+	"loc_detail": "ipaddress",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "&echo qlyrsj$()\\ wohsci\\nz^xyu||a #' &echo qlyrsj$()\\ wohsci\\nz^xyu||a #|\" &echo qlyrsj$()\\ wohsci\\nz^xyu||a #",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:38.956890+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php",
+	"name": "\u4ee3\u7801\u6267\u884c",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php",
+	"vt_id": "7a2fa5a4-7125-1062-0651-ed5219f05809",
+	"vuln_hash": "385521e7-b668-9cfc-d99d-2bfac4b2dc46",
+	"request": "POST /pikachu-master/vul/rce/rce_ping.php HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nReferer: http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php\r\nCookie: PHPSESSID=8mdg0pmbv5up5fhlf86mnbkt87\r\nContent-Length: 67\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\nipaddress='\"()%26%25<acx><ScRiPt%20>mDJc(9194)</ScRiPt>&submit=ping",
+	"source": "/Scripts/PerScheme/XSS.script",
+	"loc_id": 9,
+	"details": "   URL encoded POST \u8f93\u5165 <strong><span class=\\\"bb-dark\\\">ipaddress</span></strong> \u5df2\u8bbe\u7f6e\u4e3a <strong><span class=\\\"bb-dark\\\">&#x27;&quot;()&amp;%&lt;acx&gt;&lt;ScRiPt &gt;mDJc(9194)&lt;/ScRiPt&gt;</span></strong><br/>   ",
+	"app_id": "xss.xml",
+	"loc_detail": "ipaddress",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "'\"()&%<acx><ScRiPt >mDJc(9194)</ScRiPt>",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:01:56.242658+08:00",
+	"status": "open",
+	"tags": ["verified"],
+	"url": "http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php",
+	"name": "\u8de8\u7ad9\u811a\u672c",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "760d5a01-dc58-fcbe-6c21-4f04c64a2467",
+	"vuln_hash": "74ffcf46-787f-cf7d-a2ec-73ebe8d7ab42",
+	"request": "POST /pikachu-master/vul/rce/rce_eval.php HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nReferer: http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php\r\nCookie: PHPSESSID=8mdg0pmbv5up5fhlf86mnbkt87\r\nContent-Length: 31\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\nsubmit=%E6%8F%90%E4%BA%A4&txt=1",
+	"source": "/httpdata/text_search.js",
+	"loc_id": 2,
+	"details": "\u5e94\u7528\u7a0b\u5e8f\u9519\u8bef\u6d88\u606f\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php <br/><strong>&lt;b&gt;Parse error&lt;/b&gt;:  syntax error, unexpected end of file in &lt;b&gt;C:\\phpstudy_pro\\WWW\\pikachu-master\\vul\\rce\\rce_eval.php(19) : eval()&#x27;d code&lt;/b&gt; on line &lt;b&gt;1&lt;/b&gt;&lt;br /&gt;</strong></li><br/><li>http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php <br/><strong>&lt;b&gt;Parse error&lt;/b&gt;:  syntax error, unexpected end of file in &lt;b&gt;C:\\phpstudy_pro\\WWW\\pikachu-master\\vul\\rce\\rce_eval.php(19) : eval()&#x27;d code&lt;/b&gt; on line &lt;b&gt;1&lt;/b&gt;&lt;br /&gt;</strong></li><br/></ul>",
+	"app_id": "application_error.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:43.175958+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u5e94\u7528\u7a0b\u5e8f\u9519\u8bef\u6d88\u606f",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "bca221d1-8581-3375-4097-66b0048ed088",
+	"vuln_hash": "b539b650-6e58-7929-c83f-87375466a8b5",
+	"request": "GET /pikachu-master/vul/rce/rce_ping.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/RPA/no_https.js",
+	"loc_id": 2,
+	"details": "",
+	"app_id": "no_https.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:04.239080+08:00",
+	"status": "open",
+	"tags": ["confidence.100", "verified"],
+	"url": "http://192.168.0.177/",
+	"name": "\u672a\u52a0\u5bc6\u7684\u8fde\u63a5",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "fd1ec03e-319d-ae3b-425f-d8c1275619d8",
+	"vuln_hash": "8307ec55-b820-6248-d48d-012d4dbe96da",
+	"request": "GET /pikachu-master/vul/rce/rce.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/RPA/Cookie_Validator.js",
+	"loc_id": 2,
+	"details": "\u5177\u6709\u7f3a\u5931\u3001\u4e0d\u4e00\u81f4\u6216\u77db\u76fe\u5c5e\u6027\u7684 Cookie \u5217\u8868\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/rce/rce.php <br/><br/>\u8bbe\u7f6e\u4ee5\u4e0b\u5c5e\u6027\u7684 Cookie\uff1a<pre>Set-Cookie: PHPSESSID=8mdg0pmbv5up5fhlf86mnbkt87; path=/</pre><br/>\u6b64 Cookie \u5177\u6709\u4ee5\u4e0b\u95ee\u9898\uff1a<br/><pre>\n - Cookie without SameSite attribute.\nWhen cookies lack the SameSite attribute, Web browsers may apply different and sometimes unexpected defaults. It is therefore recommended to add a SameSite attribute with an appropriate value of either &quot;Strict&quot;, &quot;Lax&quot;, or &quot;None&quot;.\n</pre><br/></li></ul>",
+	"app_id": "cookie_misconfiguration.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:40.300745+08:00",
+	"status": "open",
+	"tags": ["confidence.100", "verified"],
+	"url": "http://192.168.0.177/",
+	"name": "Cookie \u5177\u6709\u7f3a\u5931\u3001\u4e0d\u4e00\u81f4\u6216\u77db\u76fe\u5c5e\u6027",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "04b4867e-5297-23ff-c810-97acf15ed71a",
+	"vuln_hash": "e2bf403f-77c5-ca19-2ef5-3b1996f8742a",
+	"request": "GET /pikachu-master/vul/rce/rce.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/RPA/Cookie_Without_HttpOnly.js",
+	"loc_id": 2,
+	"details": "Cookie \u672a\u8bbe\u7f6e HttpOnly \u6807\u8bb0\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/rce/rce.php <br/><br/><pre>Set-Cookie: PHPSESSID=8mdg0pmbv5up5fhlf86mnbkt87; path=/</pre><br/></li></ul>",
+	"app_id": "crawler_cookie_without_httponly.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:40.314642+08:00",
+	"status": "open",
+	"tags": ["confidence.100", "verified"],
+	"url": "http://192.168.0.177/",
+	"name": "Cookie \u672a\u8bbe\u7f6e HttpOnly \u6807\u8bb0",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "cce9a019-1bcb-333f-f560-b55d5bb28f3c",
+	"vuln_hash": "0988843e-d441-fb95-ed83-6777caf87c7f",
+	"request": "TRACE /A7jigfPmCx HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/Scripts/PerServer/Track_Trace_Server_Methods.script",
+	"loc_id": 2,
+	"details": "",
+	"app_id": "trace_method_enabled.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:01.883683+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "TRACE \u65b9\u6cd5\u5df2\u542f\u7528",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "b8e2c082-44f1-cf0b-0b8e-0e0bb357e798",
+	"vuln_hash": "54520a1d-3add-b624-fb27-eebfc76bfd38",
+	"request": "GET /pikachu-master/vul/rce/rce_ping.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/httpdata/X_Frame_Options_not_implemented.js",
+	"loc_id": 2,
+	"details": "\u4e0d\u5305\u542b XFO \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/rce/rce.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php</li><br/></ul>",
+	"app_id": "clickjacking_x_frame_options.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:03.393578+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u70b9\u51fb\u52ab\u6301\uff1aX-Frame-Options \u62a5\u5934\u7f3a\u5931",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "a27a2f93-e096-4488-207e-76cb918e2613",
+	"vuln_hash": "4f3abfc0-8240-7114-cea6-3ebaffa831ce",
+	"request": "",
+	"source": "/Scripts/PerServer/Version_Check.script",
+	"loc_id": 2,
+	"details": "\u68c0\u6d4b\u7684\u7248\u672c\uff1a<strong>PHP/7.0.9</strong>\u3002",
+	"app_id": "php_version_disclosure.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:01.908192+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "PHP \u7248\u672c\u6cc4\u9732",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+} {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "3439ad21-f264-1013-01ff-ca1c446333b0",
+	"vuln_hash": "133718b9-2724-7a89-c431-6fbf5eb85caa",
+	"request": "POST /pikachu-master/vul/rce/rce_eval.php HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nReferer: http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php\r\nCookie: PHPSESSID=8mdg0pmbv5up5fhlf86mnbkt87\r\nContent-Length: 31\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\nsubmit=%E6%8F%90%E4%BA%A4&txt=1",
+	"source": "/httpdata/text_search.js",
+	"loc_id": 2,
+	"details": "\u5305\u542b\u6b63\u5728\u62ab\u9732\u7684\u8def\u5f84\u7684\u9875\u9762\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php <br/><strong>C:\\phpstudy_pro\\WWW\\pikachu</strong></li></ul>",
+	"app_id": "possible_server_path_disclosure_(windows).xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:43.189297+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u53ef\u80fd\u51fa\u73b0\u670d\u52a1\u5668\u8def\u5f84\u62ab\u9732 (Windows)",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "3f6a8a0e-07f2-af81-54ff-61020299caeb",
+	"vuln_hash": "9f34a3a7-dcf5-820b-d232-62a337ad1a7f",
+	"request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/target/http_redirections.js",
+	"loc_id": 2,
+	"details": "",
+	"app_id": "no_http_redirection.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:00.163018+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u65e0 HTTP \u91cd\u5b9a\u5411",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果 {
+	"loc_url": "http://192.168.0.177/",
+	"vt_id": "011055fc-94f1-ab96-56ac-53117c56fb4d",
+	"vuln_hash": "2044f946-0a90-fd02-b8aa-1bf3213692ac",
+	"request": "GET /pikachu-master/vul/rce/rce_ping.php HTTP/1.1\r\nReferer: http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,br\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.0 Safari/537.36\r\nHost: 192.168.0.177\r\nConnection: Keep-alive\r\n\r\n",
+	"source": "/httpdata/CSP_not_implemented.js",
+	"loc_id": 2,
+	"details": "\u4e0d\u5305\u542b CSP \u62a5\u5934\u7684\u8def\u5f84\uff1a<br/><ul><li>http://192.168.0.177/pikachu-master/vul/rce/rce_ping.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/rce/rce.php</li><br/><li>http://192.168.0.177/pikachu-master/vul/rce/rce_eval.php</li><br/></ul>",
+	"app_id": "csp_not_implemented.xml",
+	"loc_detail": "",
+	"request_secure": null,
+	"request_port": null,
+	"attack_vector": "",
+	"use_ssl": false,
+	"first_seen": "2023-02-03T09:00:02.786725+08:00",
+	"status": "open",
+	"tags": [],
+	"url": "http://192.168.0.177/",
+	"name": "\u672a\u5b9e\u65bd\u5185\u5bb9\u5b89\u5168\u7b56\u7565 (CSP)",
+	"sensor_details": null,
+	"host": "http://192.168.0.177/"
+}
+响应结果
