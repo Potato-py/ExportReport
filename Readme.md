@@ -1,4 +1,4 @@
-# [x01] 概述：
+# 0x01 概述：
  
 - 本项目用于<u>**自动化生成报告**</u>。可根据项目需求，通过简单的提取变量来<u>**自定义报告模板**</u>。内附<u>**常见扫描器API/原报告(awvs、xray、goby)数据提取模块**</u>，可直接生成全新的自定义报告。
 - 对有复杂的功能需求时，<u>**适用于有Python基础的人使用**</u>。
@@ -12,10 +12,10 @@
 
 ## 适用场景：
 
-- 适用于[安服仔]、[渗透仔]、[SRC仔]：常见漏扫工具扫描完毕后，一键导出项目报告
-- 适用于[漏扫开发仔]：将漏扫结果导出自定义格式化报告
+- **适用于[安服仔]、[渗透仔]、[SRC仔]**：常见漏扫工具扫描完毕后，一键导出项目报告
+- **适用于[漏扫开发仔]**：将漏扫结果导出自定义格式化报告
 
-# [x02] 目录架构：
+# 0x02 目录架构：
 
 - **tool**[dir]：常见工具报告\API数据提取模块目录；
 - **reportDemo**[dir]：报告模板目录；
@@ -24,7 +24,7 @@
 - **img**[dir]：wordDemo资源加载图片、readme文档测试图片目录(测试图片可删除)；
 - **refer**[dir]：二开参考数据目录；
 
-# [x03] 开始使用：
+# 0x03 开始使用：
 
 ## 1、安装三方包：
 
@@ -70,34 +70,35 @@ from wordReport import *
   reportWord.create()
 - 因为会涉及不同数据直接格式略有不同，作者懒，所以没写，等着闲人pull request
 
-# [x04] 二改调用三方API/html提取请看以下内容：
+# 0x04 二改调用三方API/html提取请看以下内容：
 
 ## 1、html_xray脚本二改可参考的数据文档：
 
 - 【**./refer/html_xray_data.txt**】：为xray页面提取出来的漏洞信息
 
-## api_awvs脚本二改可参考的数据文档：
+## 2、api_awvs脚本二改可参考的数据文档：
 
 - https://个人awvs地址:3443/Acunetix-API-Documentation.html
 - https://www.sqlsec.com/2020/04/awvsapi.html
 - 【**./refer/api_awvs_vluns_Demo.txt**】：为apiReport.py获取awvs的【**漏洞数据**】结果例子
 - 【**./refer/api_awvs_targets_Demo.txt**】：为apiReport.py获取awvs的【**目标数据**】结果例子
 
-## html_awvs脚本二改可参考的数据文档：
+## 3、html_awvs脚本二改可参考的数据文档：
 
 - 【**./refer/html_awvs_data.txt**】：记录awvs生成的html中加密的漏洞及目标信息
 - 【**./refer/html_awvs_new_data.txt**】：html_awvs_data.txt解密后的数据
 
-## html_goby脚本二改可参考的数据文档：
+## 4、html_goby脚本二改可参考的数据文档：
 
 - 由于goby导出的文档中的数据太少，我将一些必要的做了默认处理（如：开始时间和结束时间）
 - 【**./refer/html_goby_target_data.txt**】：为apiReport.py获取goby的【**目标数据**】结果例子
 - 【**./refer/html_goby_vulns_data.txt**】：为apiReport.py获取goby的【**漏洞数据**】结果例子
 
-## api_nessus脚本编写请参考链接（注意个人版不支持调用API）：
+## 5、api_nessus脚本编写请参考链接（注意个人版不支持调用API）：
 
 - https://个人nessus地址:8834/api
 
-# [x05] 更新贡献：Thank them for pull request into this project.
+# 0x05 更新贡献：
+##Thank them for pull request into this project.
 
-- 'html_goby.py' was written by ZhangRT.
+- **'html_goby.py'** was written by **ZhangRT**.
