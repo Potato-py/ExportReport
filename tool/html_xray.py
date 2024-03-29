@@ -7,7 +7,7 @@ from lxml import etree  # pip3 install wheel
 import configparser
 
 config = configparser.ConfigParser()
-config.read('./config.ini')
+config.read('../config.ini')
 file_name = config['xray']['xray_report_file']
 
 heightType = ['sqldet', 'cmd-injection', 'xxe', 'phantasm', 'upload', 'brute-force', 'struts', 'thinkphp']
@@ -18,7 +18,7 @@ lowType = ['dirscan', 'jsonp', 'baseline', 'redirect', 'crlf-injection']
 # 获取xray中的基本数据
 def format_xray_targets_data(vuln_info, targets_info, vuln_time):
     if not targets_info:
-        tmp_data = {'目标地址': vuln_info['目标地址'], '目标描述': vuln_info['目标描述'], '目标主机': vuln_info['目标主机'],
+        tmp_data = {'目标地址': vuln_info['目标地址'], '目标描述': vuln_info.get('目标描述', vuln_info['目标地址']), '目标主机': vuln_info['目标主机'],
                     '开始时间': 1,
                     '结束时间': 1,
                     '风险数量': {"high": 0, "medium": 0, "low": 0}}
@@ -74,4 +74,4 @@ def get_xray_html_data():
     print('\033[32m[o] Xray Html信息提取完毕!!! \033[0m')
     return targets_info, vuln_info
 
-# get_xray_html_data('../0823.html')
+# get_xray_html_data()
